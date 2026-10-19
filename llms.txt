@@ -1,0 +1,24 @@
+# LBH
+
+> LBH is an Israeli investment group in infrastructure, industry, logistics and real estate, led by Ofer Linchevski and Shimon Ben Hamo, currently focused on the aerospace and defense supply chain.
+
+Experimental supplementary file. The authoritative information is the visible content of the pages below.
+
+## Organization
+- [About LBH](https://lbh.example/en/about/)
+- [Investment strategy](https://lbh.example/en/strategy/)
+- [Track record](https://lbh.example/en/track-record/)
+- [Questions and answers](https://lbh.example/en/faq/)
+
+## Team
+- [Shimon Ben Hamo, Founding Partner](https://lbh.example/en/team/shimon-ben-hamo/)
+- [Ofer Linchevski, Founding Partner](https://lbh.example/en/team/ofer-linchevski/)
+- [Mordy Ben Ami, Managing Partner](https://lbh.example/en/team/mordy-ben-ami/)
+- [Moni Katz, Managing Partner](https://lbh.example/en/team/moni-katz/)
+- [Dori Grossman, Managing Director](https://lbh.example/en/team/dori-grossman/)
+- [Yifat Feiglin, Head of Investments](https://lbh.example/en/team/yifat-feiglin/)
+- [Assaf Reich, Senior Operating Advisor](https://lbh.example/en/team/assaf-reich/)
+
+## Hebrew
+- [דף הבית](https://lbh.example/he/)
+- [הצוות](https://lbh.example/he/team/)

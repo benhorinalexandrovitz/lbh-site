@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LBH</title>
+<script>
+// Serve the runtime's React/Babel from this site instead of unpkg (files are byte-identical to the pinned SRI).
+window.__resources = {
+  "https://unpkg.com/react@18.3.1/umd/react.production.min.js": "./vendor/react.production.min.js",
+  "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js": "./vendor/react-dom.production.min.js",
+  "https://unpkg.com/@babel/standalone@7.29.0/babel.min.js": "./vendor/babel.min.js"
+};
+</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="ext-resource-dependency" content="content.js"><meta name="ext-resource-dependency" content="content-geo.js"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Karantina:wght@400;700&family=Heebo:wght@300;400;500;600&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet"><style>html{scroll-behavior:smooth}body{margin:0;background:#0E1724;color:#EEE9DF;-webkit-font-smoothing:antialiased}a{color:#C2A36B}a:hover{color:#E0C690}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #C2A36B;outline-offset:3px}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}</style><script src="content.js"></script><script src="content-geo.js"></script></helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0E1724"></rect><text x="50" y="58" text-anchor="middle" font-family="sans-serif" font-weight="600" font-size="22" fill="#C2A36B">LBH</text></svg></template>
+<div style="display:none" aria-hidden="true"><img data-portrait="0" src="assets/team/shimon-ben-hamo.png" alt=""><img data-portrait="1" src="assets/team/ofer-linchevski.png" alt=""><img data-portrait="2" src="assets/team/mordy-ben-ami.png" alt=""><img data-portrait="3" src="assets/team/moni-katz.png" alt=""><img data-portrait="4" src="assets/team/dori-grossman.png" alt=""><img data-portrait="5" src="assets/team/yifat-feiglin.png" alt=""><img data-portrait="6" src="assets/team/assaf-reich.png" alt=""><img data-logo="1" src="assets/lbh-logo.png" alt=""></div>
+<sc-if value="{{ ready }}" hint-placeholder-val="{{ true }}">
+<div dir="{{ dir }}" lang="{{ lang }}" style="--hs:{{ hs }};--hw:{{ hw }};--ls:{{ ls }};--els:{{ els }};font-weight:{{ bw }};min-height:100vh;background:#0E1724;color:#EEE9DF;font-family:Oswald,Heebo,system-ui,sans-serif;font-size:17px;line-height:1.7">
+
+<a href="#main" onClick="{{ skipToMain }}" style="position:absolute;inset-inline-start:16px;top:-60px;z-index:100;background:#C2A36B;color:#0E1724;padding:10px 16px;font-weight:600;text-decoration:none" style-focus="top:12px">{{ ui.skip }}</a>
+
+<header style="position:sticky;top:0;z-index:50;background:rgba(14,23,36,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(238,233,223,.08)">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);height:84px;display:flex;align-items:center;gap:32px">
+<a href="{{ links.home }}" aria-label="LBH – {{ ui.home }}" style="display:flex;align-items:center;flex:none"><img src="{{ logoSrc }}" alt="LBH" width="44" height="44" style="width:44px;height:44px;border-radius:50%;object-fit:cover;display:block"></a>
+<sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
+<nav aria-label="Main" style="flex:1;display:flex;justify-content:center"><ul style="list-style:none;margin:0;padding:0;display:flex;gap:clamp(18px,2.6vw,40px)"><sc-for list="{{ nav }}" as="n" hint-placeholder-count="6"><li><a href="{{ n.href }}" aria-current="{{ n.aria }}" style="font-size:14px;letter-spacing:.02em;text-decoration:none;color:{{ n.color }};padding:6px 0;border-bottom:1px solid {{ n.border }};transition:color .25s" style-hover="color:#EEE9DF">{{ n.label }}</a></li></sc-for></ul></nav>
+</sc-if>
+<sc-if value="{{ mobile }}"><div style="flex:1"></div></sc-if>
+<a href="{{ switchHref }}" hreflang="{{ ui.switchLang }}" lang="{{ ui.switchLang }}" aria-label="{{ ui.switchTo }}" style="flex:none;font-size:12px;font-weight:600;letter-spacing:.12em;color:#C2A36B;text-decoration:none;border:1px solid rgba(194,163,107,.55);padding:8px 14px;transition:background .25s,color .25s" style-hover="background:#C2A36B;color:#0E1724">{{ ui.switchShort }}</a>
+<sc-if value="{{ mobile }}"><button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuOpen }}" aria-controls="mobile-menu" aria-label="{{ menuLabel }}" style="flex:none;background:none;border:0;padding:10px;cursor:pointer;display:flex;flex-direction:column;gap:6px"><span style="width:24px;height:1.5px;background:#EEE9DF;display:block"></span><span style="width:24px;height:1.5px;background:#EEE9DF;display:block"></span></button></sc-if>
+</div>
+</header>
+
+<sc-if value="{{ menuVisible }}">
+<div id="mobile-menu" style="position:fixed;inset:84px 0 0 0;z-index:49;background:#0A111B;padding:40px clamp(20px,5vw,64px);display:flex;flex-direction:column;gap:8px;overflow:auto">
+<nav aria-label="Main"><ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column"><sc-for list="{{ nav }}" as="n"><li style="border-bottom:1px solid rgba(238,233,223,.1)"><a href="{{ n.href }}" onClick="{{ closeMenu }}" aria-current="{{ n.aria }}" style="display:block;padding:18px 0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * 30px);line-height:1.1;color:#EEE9DF;text-decoration:none">{{ n.label }}</a></li></sc-for></ul></nav>
+</div>
+</sc-if>
+
+<main id="main" tabindex="-1" style="outline:none">
+
+<sc-if value="{{ is.home }}" hint-placeholder-val="{{ true }}">
+<section aria-labelledby="hero-h" style="padding:clamp(72px,11vw,150px) 0 clamp(56px,7vw,96px)">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:flex;flex-direction:column;gap:clamp(28px,4vw,48px)">
+<div style="display:flex;align-items:center;gap:14px"><span style="width:36px;height:1px;background:#C2A36B"></span><span style="font-size:12px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#C2A36B">{{ H.eyebrow }}</span></div>
+<h1 id="hero-h" style="margin:0;max-width:1120px;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(46px,7.4vw,112px));line-height:1.02;text-wrap:balance">{{ H.hero }}</h1>
+<div style="display:flex;flex-wrap:wrap;gap:32px 64px;align-items:flex-end;justify-content:space-between;border-top:1px solid rgba(238,233,223,.14);padding-top:28px">
+<p style="margin:0;max-width:600px;font-size:clamp(17px,1.4vw,20px);line-height:1.65;color:#CFC9BD;text-wrap:pretty">{{ H.heroSub }}</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px"><a href="{{ links.strategy }}" style="background:#C2A36B;color:#0E1724;text-decoration:none;font-size:14px;font-weight:600;padding:15px 26px;transition:background .25s" style-hover="background:#D9BE88;color:#0E1724">{{ ui.toStrategy }}</a><a href="{{ links.team }}" style="border:1px solid rgba(238,233,223,.35);color:#EEE9DF;text-decoration:none;font-size:14px;font-weight:600;padding:14px 26px;transition:border-color .25s" style-hover="border-color:#C2A36B;color:#EEE9DF">{{ ui.allTeam }}</a></div>
+</div>
+</div>
+</section>
+<sc-if value="{{ heroImage }}" hint-placeholder-val="{{ true }}">
+<div role="img" aria-label="{{ ui.tempImg }}: {{ H.heroImg }}" style="position:relative;height:clamp(280px,42vw,620px);background:linear-gradient(160deg,#1C2C43 0%,#0F1A29 75%);overflow:hidden">
+<div style="position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(194,163,107,.05) 0 1px,transparent 1px 16px)"></div>
+<div style="position:absolute;inset-inline-start:clamp(20px,5vw,64px);bottom:24px;display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8E96A3"><span style="width:6px;height:6px;background:#C2A36B"></span>{{ ui.tempImg }} · {{ H.heroImg }}</div>
+</div>
+</sc-if>
+
+<section aria-labelledby="what-h" style="background:#F4F1EA;color:#1D2633;padding:clamp(72px,10vw,140px) 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:40px 80px">
+<div style="display:flex;flex-direction:column;gap:18px"><span style="font-size:12px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#7A6235">{{ H.whatH }}</span><h2 id="what-h" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(34px,4vw,58px));line-height:1.08;text-wrap:balance">{{ H.introH }}</h2></div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<sc-for list="{{ H.introP }}" as="p"><p style="margin:0;font-size:clamp(17px,1.3vw,19px);line-height:1.75;text-wrap:pretty">{{ p }}</p></sc-for>
+<div style="display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:8px"><a href="{{ links.about }}" style="color:#7A6235;font-weight:600;font-size:15px;text-decoration:none;border-bottom:1px solid #A58B61;padding-bottom:3px" style-hover="color:#1D2633">{{ H.aboutLink }} {{ arrow }}</a><a href="{{ links.faq }}" style="color:#7A6235;font-weight:600;font-size:15px;text-decoration:none;border-bottom:1px solid #A58B61;padding-bottom:3px" style-hover="color:#1D2633">{{ ui.faqLink }} {{ arrow }}</a></div>
+</div>
+</div>
+</section>
+<section style="background:#EAE5DA;color:#1D2633;padding:clamp(56px,7vw,96px) 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:48px 80px">
+<sc-for list="{{ H.blocks }}" as="b"><div style="display:flex;flex-direction:column;gap:16px;border-top:1px solid #A58B61;padding-top:26px"><h2 style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(24px,2.3vw,32px));line-height:1.2">{{ b.h }}</h2><sc-for list="{{ b.p }}" as="p"><p style="margin:0;font-size:17px;line-height:1.75;text-wrap:pretty">{{ p }}</p></sc-for></div></sc-for>
+</div>
+</section>
+
+<section aria-labelledby="exp-h" style="padding:clamp(72px,10vw,140px) 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 60px;margin-bottom:48px"><h2 id="exp-h" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(36px,4.4vw,64px));line-height:1.05">{{ H.expH }}</h2><p style="margin:0;max-width:440px;color:#A9AFB8;font-size:16px">{{ H.expIntro }}</p></div>
+<ul style="list-style:none;margin:0;padding:0;border-bottom:1px solid rgba(238,233,223,.14)">
+<sc-for list="{{ sectors }}" as="s" hint-placeholder-count="6"><li style="border-top:1px solid rgba(238,233,223,.14)"><a href="{{ s.href }}" style="display:grid;grid-template-columns:48px minmax(0,1fr) minmax(0,1fr) 24px;gap:12px 24px;align-items:baseline;padding:26px 0;text-decoration:none;color:#EEE9DF;transition:padding .35s,color .35s" style-hover="padding-inline-start:12px;color:#E0C690"><span style="font-size:12px;color:#C2A36B;letter-spacing:.1em">{{ s.num }}</span><span style="font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(22px,2.4vw,34px));line-height:1.15">{{ s.name }}</span><span style="font-size:15px;color:#A9AFB8;line-height:1.6">{{ s.desc }}</span><span aria-hidden="true" style="color:#C2A36B">{{ arrow }}</span></a></li></sc-for>
+</ul>
+</div>
+</section>
+
+<section aria-labelledby="team-h" style="background:#0A111B;padding:clamp(72px,10vw,140px) 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 60px;margin-bottom:56px"><div style="display:flex;flex-direction:column;gap:16px"><h2 id="team-h" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(36px,4.4vw,64px));line-height:1.05">{{ H.teamH }}</h2><p style="margin:0;max-width:520px;color:#A9AFB8;font-size:16px">{{ H.teamIntro }}</p></div><a href="{{ links.team }}" style="color:#C2A36B;font-weight:600;font-size:15px;text-decoration:none;border-bottom:1px solid rgba(194,163,107,.5);padding-bottom:3px">{{ ui.allTeam }} {{ arrow }}</a></div>
+<ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,210px),1fr));gap:48px 24px">
+<sc-for list="{{ people }}" as="m" hint-placeholder-count="7"><li><a href="{{ m.href }}" style="display:flex;flex-direction:column;gap:14px;text-decoration:none;color:#EEE9DF"><div style="aspect-ratio:4/5;overflow:hidden;background:linear-gradient(180deg,#1E2E46,#142133)"><img src="{{ m.img }}" alt="{{ m.alt }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;filter:{{ tone }};-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);transition:filter .6s,transform .8s" style-hover="filter:none"></div><div style="display:flex;flex-direction:column;gap:4px"><span style="width:20px;height:1px;background:#C2A36B;margin-bottom:6px"></span><span style="font-size:17px;font-weight:600;line-height:1.3">{{ m.name }}</span><span style="font-size:13px;color:#C2A36B">{{ m.title }}</span></div></a></li></sc-for>
+</ul>
+</div>
+</section>
+
+<section aria-labelledby="orgs-h" style="background:#EAE5DA;color:#1D2633;padding:clamp(40px,5vw,64px) 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:flex;flex-direction:column;gap:20px">
+<h2 id="orgs-h" style="margin:0;font-size:12px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#7A6235">{{ H.orgsH }}</h2>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 36px"><sc-for list="{{ H.orgs }}" as="o"><li style="font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);font-size:calc(var(--hs) * clamp(18px,1.7vw,24px));line-height:1.3">{{ o }}</li></sc-for></ul>
+</div>
+</section>
+
+<section aria-labelledby="appr-h" style="padding:clamp(72px,10vw,140px) 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 60px;margin-bottom:56px"><div style="display:flex;flex-direction:column;gap:16px"><span dir="ltr" style="font-size:12px;font-weight:600;letter-spacing:.18em;color:#C2A36B;align-self:flex-start">BUY &amp; BUILD</span><h2 id="appr-h" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(36px,4.4vw,64px));line-height:1.05">{{ H.apprH }}</h2></div><p style="margin:0;max-width:440px;color:#A9AFB8;font-size:16px">{{ H.apprIntro }}</p></div>
+<ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:40px 32px">
+<sc-for list="{{ pillars }}" as="p" hint-placeholder-count="4"><li style="border-top:1px solid #C2A36B;padding-top:24px;display:flex;flex-direction:column;gap:12px"><span style="font-size:12px;color:#C2A36B;letter-spacing:.1em">{{ p.num }}</span><h3 style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * 24px);line-height:1.2">{{ p.name }}</h3><p style="margin:0;font-size:15px;color:#A9AFB8;line-height:1.65">{{ p.desc }}</p></li></sc-for>
+</ol>
+</div>
+</section>
+
+<section aria-labelledby="cases-h" style="padding:0 0 clamp(72px,10vw,140px)">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 60px;margin-bottom:48px;border-top:1px solid rgba(238,233,223,.14);padding-top:clamp(56px,7vw,96px)"><div style="display:flex;flex-direction:column;gap:16px"><h2 id="cases-h" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(36px,4.4vw,64px));line-height:1.05">{{ H.casesH }}</h2><p style="margin:0;max-width:520px;color:#A9AFB8;font-size:16px">{{ H.casesIntro }}</p></div><a href="{{ links.track }}" style="color:#C2A36B;font-weight:600;font-size:15px;text-decoration:none;border-bottom:1px solid rgba(194,163,107,.5);padding-bottom:3px">{{ ui.toTrack }} {{ arrow }}</a></div>
+<ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:40px 24px">
+<sc-for list="{{ cases }}" as="c" hint-placeholder-count="4"><li><a href="{{ c.href }}" style="display:flex;flex-direction:column;gap:18px;text-decoration:none;color:#EEE9DF"><div style="aspect-ratio:4/3;overflow:hidden;position:relative;background:linear-gradient(160deg,#1C2C43 0%,#0F1A29 75%)"><sc-if value="{{ c.isGadot }}"><img src="assets/deck/image36.png" alt="{{ c.imgCap }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s" style-hover="transform:scale(1.04)"></sc-if><sc-if value="{{ c.noImg }}"><div role="img" aria-label="{{ ui.tempImg }}: {{ c.imgCap }}" style="position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(194,163,107,.05) 0 1px,transparent 1px 16px)"><span style="position:absolute;inset-inline-start:16px;bottom:14px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8E96A3">{{ ui.tempImg }} · {{ c.imgCap }}</span></div></sc-if></div><div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#C2A36B">{{ c.kindLabel }}</span><h3 style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * 24px);line-height:1.2">{{ c.name }}</h3><p style="margin:0;font-size:15px;color:#A9AFB8;line-height:1.6">{{ c.tagline }}</p></div></a></li></sc-for>
+</ul>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ showHero }}">
+<section aria-labelledby="page-h" style="padding:clamp(56px,8vw,110px) 0 clamp(48px,6vw,80px);border-bottom:1px solid rgba(238,233,223,.1)">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:flex;flex-direction:column;gap:28px">
+<nav aria-label="Breadcrumb"><ol style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;font-size:13px;color:#8E96A3"><sc-for list="{{ crumbs }}" as="c"><li style="display:flex;gap:8px"><sc-if value="{{ c.link }}"><a href="{{ c.href }}" style="color:#A9AFB8;text-decoration:none" style-hover="color:#EEE9DF">{{ c.label }}</a><span aria-hidden="true">/</span></sc-if><sc-if value="{{ c.last }}"><span aria-current="page" style="color:#EEE9DF">{{ c.label }}</span></sc-if></li></sc-for></ol></nav>
+<h1 id="page-h" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(46px,6.6vw,96px));line-height:1.02">{{ hero.h1 }}</h1>
+<sc-if value="{{ hero.lead }}"><div style="display:flex;gap:24px;align-items:flex-start"><span style="flex:none;width:36px;height:1px;background:#C2A36B;margin-top:15px"></span><p style="margin:0;max-width:760px;font-size:clamp(18px,1.5vw,22px);line-height:1.6;color:#CFC9BD;text-wrap:pretty">{{ hero.lead }}</p></div></sc-if>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ is.about }}">
+<section style="background:#F4F1EA;color:#1D2633;padding:clamp(64px,9vw,120px) 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:flex;flex-direction:column">
+<sc-for list="{{ A.sections }}" as="s"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px 80px;padding:40px 0;border-top:1px solid #D8D5CE"><h2 style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(26px,2.6vw,36px));line-height:1.15">{{ s.h }}</h2><div style="display:flex;flex-direction:column;gap:18px;max-width:720px"><sc-for list="{{ s.p }}" as="pp"><p style="margin:0;font-size:18px;line-height:1.75;text-wrap:pretty">{{ pp }}</p></sc-for></div></div></sc-for>
+</div>
+</section>
+<section style="padding:clamp(56px,7vw,96px) 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px 80px">
+<h2 style="margin:0;font-size:12px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#C2A36B">{{ A.disclosureH }}</h2>
+<p style="margin:0;font-size:15px;color:#A9AFB8;line-height:1.7;max-width:720px">{{ A.disclosure }}</p>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ is.strategy }}">
+<section aria-labelledby="focus-h" style="background:#F4F1EA;color:#1D2633;padding:clamp(64px,9vw,120px) 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:32px 80px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:18px"><span style="font-size:12px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#7A6235">{{ S.focusEyebrow }}</span><h2 id="focus-h" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(32px,3.8vw,56px));line-height:1.08">{{ S.focusH }}</h2></div>
+<p style="margin:0;font-size:clamp(17px,1.35vw,20px);line-height:1.75;text-wrap:pretty">{{ S.focusP }}</p>
+</div>
+</section>
+<section aria-labelledby="appr2-h" style="padding:clamp(64px,9vw,120px) 0 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+<h2 id="appr2-h" style="margin:0 0 16px;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(28px,3vw,44px));line-height:1.1">{{ S.approachH }}</h2>
+<sc-for list="{{ S.approach }}" as="a"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px 80px;padding:36px 0;border-top:1px solid rgba(238,233,223,.14)"><h3 style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(22px,2.2vw,30px));line-height:1.2">{{ a.h }}</h3><div style="display:flex;flex-direction:column;gap:14px;max-width:720px"><sc-for list="{{ a.p }}" as="pp"><p style="margin:0;font-size:17px;line-height:1.75;color:#CFC9BD;text-wrap:pretty">{{ pp }}</p></sc-for></div></div></sc-for>
+</div>
+</section>
+<section aria-labelledby="sectors-h" style="padding:clamp(64px,9vw,120px) 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+<h2 id="sectors-h" style="margin:0 0 32px;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(28px,3vw,44px));line-height:1.1">{{ S.sectorsH }}</h2>
+<div style="border-bottom:1px solid rgba(238,233,223,.14)">
+<sc-for list="{{ sectors }}" as="s"><div id="{{ s.slug }}" style="scroll-margin-top:100px;display:grid;grid-template-columns:48px minmax(0,1fr) minmax(0,1.2fr);gap:12px 24px;align-items:baseline;padding:30px 0;border-top:1px solid rgba(238,233,223,.14)"><span style="font-size:12px;color:#C2A36B;letter-spacing:.1em">{{ s.num }}</span><h3 style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(22px,2.2vw,30px));line-height:1.2">{{ s.name }}</h3><div style="display:flex;flex-direction:column;gap:14px"><p style="margin:0;font-size:17px;color:#EEE9DF;line-height:1.6;font-weight:500">{{ s.desc }}</p><sc-for list="{{ s.long }}" as="lp"><p style="margin:0;font-size:16px;color:#CFC9BD;line-height:1.75;text-wrap:pretty">{{ lp }}</p></sc-for><span style="font-size:11px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#8E96A3;margin-top:4px">{{ S.sectorsNote }}</span></div></div></sc-for>
+</div>
+</div>
+</section>
+<section aria-labelledby="bb-h" style="background:#0A111B;padding:clamp(64px,9vw,120px) 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 60px;margin-bottom:48px"><h2 id="bb-h" dir="ltr" style="margin:0;font-family:Oswald,sans-serif;font-weight:500;letter-spacing:0;font-size:clamp(36px,4.4vw,64px);line-height:1.05">{{ S.bbH }}</h2><p style="margin:0;max-width:440px;color:#A9AFB8;font-size:16px">{{ S.bbP }}</p></div>
+<ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:40px 32px">
+<sc-for list="{{ pillars }}" as="p"><li style="border-top:1px solid rgba(194,163,107,.6);padding:28px 0 8px;display:flex;flex-direction:column;gap:14px"><span style="font:500 40px/1 Oswald,sans-serif;color:#C2A36B">{{ p.num }}</span><h3 style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * 22px);line-height:1.25">{{ p.name }}</h3><p style="margin:0;font-size:15px;color:#A9AFB8;line-height:1.65">{{ p.desc }}</p></li></sc-for>
+</ol>
+</div>
+</section>
+<section style="padding:clamp(48px,6vw,80px) 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px 80px">
+<h2 style="margin:0;font-size:12px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#C2A36B">{{ S.noteH }}</h2>
+<p style="margin:0;font-size:15px;color:#A9AFB8;line-height:1.7;max-width:720px">{{ S.noteP }}</p>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ is.track }}">
+<div style="max-width:1320px;margin:0 auto;padding:32px clamp(20px,5vw,64px) 0;display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;font-size:13px;color:#A9AFB8"><span style="font-size:12px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#8E96A3">{{ T.legendH }}</span><span style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;background:#C2A36B"></span>{{ ui.investment }}</span><span style="display:flex;align-items:center;gap:8px"><span style="width:9px;height:9px;border:1px solid #C2A36B"></span>{{ ui.leadership }}</span></div>
+<sc-for list="{{ cases }}" as="c">
+<article id="{{ c.slug }}" aria-labelledby="h-{{ c.slug }}" style="scroll-margin-top:90px;padding:clamp(56px,8vw,110px) 0;border-bottom:1px solid rgba(238,233,223,.1)">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:flex;flex-direction:column;gap:48px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:32px 64px;align-items:end">
+<div style="display:flex;flex-direction:column;gap:18px">
+<sc-if value="{{ c.isInv }}"><span style="align-self:flex-start;background:#C2A36B;color:#0E1724;font-size:11px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;padding:6px 12px">{{ c.kindLabel }}</span></sc-if>
+<sc-if value="{{ c.isLead }}"><span style="align-self:flex-start;border:1px solid #C2A36B;color:#C2A36B;font-size:11px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;padding:5px 11px">{{ c.kindLabel }}</span></sc-if>
+<h2 id="h-{{ c.slug }}" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(36px,4.6vw,68px));line-height:1.04">{{ c.name }}</h2>
+<p style="margin:0;font-family:Oswald,Heebo,sans-serif;font-size:clamp(18px,1.6vw,23px);line-height:1.45;color:#CFC9BD;max-width:560px">{{ c.tagline }}</p>
+<sc-if value="{{ c.period }}"><span style="font-size:13px;color:#8E96A3">{{ T.periodL }}: {{ c.period }}</span></sc-if>
+</div>
+<div style="aspect-ratio:16/10;overflow:hidden;position:relative;background:linear-gradient(160deg,#1C2C43 0%,#0F1A29 75%)"><sc-if value="{{ c.isGadot }}"><img src="assets/deck/image36.png" alt="{{ c.imgCap }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></sc-if><sc-if value="{{ c.noImg }}"><div role="img" aria-label="{{ ui.tempImg }}: {{ c.imgCap }}" style="position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(194,163,107,.05) 0 1px,transparent 1px 16px)"><span style="position:absolute;inset-inline-start:18px;bottom:16px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8E96A3">{{ ui.tempImg }} · {{ c.imgCap }}</span></div></sc-if></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:32px 48px">
+<div style="display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(238,233,223,.14);padding-top:20px"><h3 style="margin:0;font-size:12px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#C2A36B">{{ T.contextH }}</h3><p style="margin:0;font-size:16px;line-height:1.7;color:#CFC9BD">{{ c.context }}</p></div>
+<div style="display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(238,233,223,.14);padding-top:20px"><h3 style="margin:0;font-size:12px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#C2A36B">{{ T.challengeH }}</h3><p style="margin:0;font-size:16px;line-height:1.7;color:#CFC9BD">{{ c.challenge }}</p></div>
+<div style="display:flex;flex-direction:column;gap:12px;border-top:1px solid rgba(238,233,223,.14);padding-top:20px"><h3 style="margin:0;font-size:12px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#C2A36B">{{ ui.leaders }}</h3><ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px"><sc-for list="{{ c.leaderList }}" as="l"><li><a href="{{ l.href }}" style="display:flex;align-items:center;gap:12px;color:#EEE9DF;text-decoration:none" style-hover="color:#E0C690"><img src="{{ l.img }}" alt="" style="width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:top;background:#1E2E46;filter:{{ tone }}"><span style="display:flex;flex-direction:column;line-height:1.35"><span style="font-size:15px;font-weight:600">{{ l.name }}</span><span style="font-size:12px;color:#A9AFB8">{{ l.title }}</span></span></a></li></sc-for></ul></div>
+</div>
+<sc-if value="{{ c.hasStory }}"><div style="display:flex;flex-direction:column">
+<sc-for list="{{ c.story }}" as="st"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px 64px;padding:32px 0;border-top:1px solid rgba(238,233,223,.14)"><h3 style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(21px,2vw,27px));line-height:1.25">{{ st.h }}</h3><div style="display:flex;flex-direction:column;gap:14px;max-width:720px"><sc-for list="{{ st.p }}" as="pp"><p style="margin:0;font-size:16.5px;line-height:1.75;color:#CFC9BD;text-wrap:pretty">{{ pp }}</p></sc-for></div></div></sc-for>
+</div></sc-if>
+<div style="display:flex;flex-direction:column;gap:20px">
+<h3 style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * 24px);line-height:1.2">{{ T.approachH }}</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:32px 28px">
+<sc-for list="{{ c.pillars }}" as="p"><div style="border-top:1px solid rgba(238,233,223,.16);padding:22px 0 4px;display:flex;flex-direction:column;gap:14px"><div style="display:flex;gap:10px;align-items:baseline"><span style="font-size:12px;color:#C2A36B">{{ p.num }}</span><h4 style="margin:0;font-size:16px;font-weight:600">{{ p.h }}</h4></div><ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px"><sc-for list="{{ p.items }}" as="it"><li style="display:grid;grid-template-columns:12px 1fr;gap:6px;font-size:14px;line-height:1.55;color:#CFC9BD"><span aria-hidden="true" style="width:5px;height:5px;background:#C2A36B;margin-top:9px"></span>{{ it }}</li></sc-for></ul></div></sc-for>
+</div>
+<sc-if value="{{ c.outcome }}"><div style="display:flex;gap:16px;align-items:baseline;border-top:1px solid rgba(194,163,107,.4);padding-top:18px"><span style="flex:none;font-size:12px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#C2A36B">{{ T.outcomeH }}</span><p style="margin:0;font-size:16px;color:#CFC9BD">{{ c.outcome }}</p></div></sc-if>
+</div>
+</div>
+</article>
+</sc-for>
+<section style="padding:clamp(48px,6vw,80px) 0"><div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px)"><p style="margin:0;max-width:880px;font-size:14px;color:#8E96A3;line-height:1.7">{{ T.disclosure }}</p></div></section>
+</sc-if>
+
+<sc-if value="{{ is.team }}">
+<section style="padding:clamp(56px,8vw,110px) 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+<ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:64px 28px">
+<sc-for list="{{ people }}" as="m"><li><a href="{{ m.href }}" style="display:flex;flex-direction:column;gap:18px;text-decoration:none;color:#EEE9DF"><div style="aspect-ratio:4/5;overflow:hidden;background:linear-gradient(180deg,#1E2E46,#142133)"><img src="{{ m.img }}" alt="{{ m.alt }}" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;filter:{{ tone }};-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);transition:filter .6s" style-hover="filter:none"></div><div style="display:flex;flex-direction:column;gap:6px"><span style="width:20px;height:1px;background:#C2A36B;margin-bottom:6px"></span><h2 style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * 24px);line-height:1.2">{{ m.name }}</h2><span style="font-size:14px;color:#C2A36B">{{ m.title }}</span><p style="margin:6px 0 0;font-size:14px;color:#A9AFB8;line-height:1.6">{{ m.card }}</p><span style="margin-top:6px;font-size:13px;font-weight:600;color:#C2A36B">{{ ui.viewProfile }} {{ arrow }}</span></div></a></li></sc-for>
+</ul>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ is.profile }}">
+<article aria-labelledby="person-h">
+<section style="padding:clamp(48px,7vw,96px) 0 clamp(56px,7vw,96px)">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px 80px;align-items:end">
+<div style="display:flex;flex-direction:column;gap:26px">
+<nav aria-label="Breadcrumb"><ol style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;font-size:13px;color:#8E96A3"><sc-for list="{{ crumbs }}" as="c"><li style="display:flex;gap:8px"><sc-if value="{{ c.link }}"><a href="{{ c.href }}" style="color:#A9AFB8;text-decoration:none" style-hover="color:#EEE9DF">{{ c.label }}</a><span aria-hidden="true">/</span></sc-if><sc-if value="{{ c.last }}"><span aria-current="page" style="color:#EEE9DF">{{ c.label }}</span></sc-if></li></sc-for></ol></nav>
+<span style="font-size:12px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#C2A36B">LBH · {{ person.title }}</span>
+<h1 id="person-h" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(48px,6.4vw,96px));line-height:1">{{ person.name }}</h1>
+<span style="width:48px;height:1px;background:#C2A36B"></span>
+<p style="margin:0;max-width:620px;font-size:clamp(18px,1.5vw,22px);line-height:1.6;color:#CFC9BD;text-wrap:pretty">{{ person.summary }}</p>
+</div>
+<div style="max-width:{{ person.maxW }};width:100%;justify-self:end;aspect-ratio:4/5;overflow:hidden;background:linear-gradient(180deg,#1E2E46,#142133)"><img src="{{ person.img }}" alt="{{ person.alt }}" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)"></div>
+</div>
+</section>
+<section style="background:#F4F1EA;color:#1D2633;padding:clamp(56px,8vw,110px) 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:flex;flex-wrap:wrap;gap:56px clamp(40px,6vw,96px);align-items:flex-start">
+<aside aria-label="{{ person.name }}" style="flex:1 1 260px;max-width:360px;position:{{ asidePos }};top:110px;display:flex;flex-direction:column;border-top:2px solid #A58B61">
+<dl style="margin:0;display:flex;flex-direction:column">
+<div style="padding:18px 0;border-bottom:1px solid #D8D5CE;display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#7A6235">{{ P.factRole }}</dt><dd style="margin:0;font-size:16px;font-weight:600">{{ person.title }}</dd></div>
+<div style="padding:18px 0;border-bottom:1px solid #D8D5CE;display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#7A6235">{{ P.factAffil }}</dt><dd style="margin:0;font-size:16px"><a href="{{ links.about }}" style="color:#1D2633">LBH</a></dd></div>
+<div style="padding:18px 0;border-bottom:1px solid #D8D5CE;display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#7A6235">{{ P.factPrev }}</dt><dd style="margin:0;font-size:16px">{{ person.prev }}</dd></div>
+</dl>
+<nav aria-label="{{ P.toc }}" style="padding-top:22px;display:flex;flex-direction:column;gap:10px"><span style="font-size:11px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#4E5664">{{ P.toc }}</span><sc-for list="{{ toc }}" as="t"><a href="{{ t.href }}" onClick="{{ t.go }}" style="font-size:14px;color:#4E5664;text-decoration:none" style-hover="color:#1D2633">{{ t.label }}</a></sc-for></nav>
+</aside>
+<div style="flex:999 1 520px;min-width:0;display:flex;flex-direction:column;gap:clamp(48px,6vw,72px)">
+<section id="bio" aria-labelledby="bio-h" style="scroll-margin-top:110px;display:flex;flex-direction:column;gap:20px"><h2 id="bio-h" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(28px,2.8vw,40px));line-height:1.1">{{ P.bioH }}</h2><p style="margin:0;font-size:19px;line-height:1.7;font-weight:500;max-width:760px">{{ person.summary }}</p><sc-for list="{{ person.bio }}" as="b"><p style="margin:0;font-size:18px;line-height:1.75;max-width:760px;text-wrap:pretty">{{ b }}</p></sc-for></section>
+<section id="roles" aria-labelledby="roles-h" style="scroll-margin-top:110px;display:flex;flex-direction:column;gap:16px"><h2 id="roles-h" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(28px,2.8vw,40px));line-height:1.1">{{ P.rolesH }}</h2><ul style="list-style:none;margin:0;padding:0;border-bottom:1px solid #D8D5CE"><sc-for list="{{ person.roles }}" as="r"><li style="display:grid;grid-template-columns:16px 1fr;gap:10px;padding:16px 0;border-top:1px solid #D8D5CE;font-size:17px;line-height:1.5"><span aria-hidden="true" style="width:6px;height:6px;background:#A58B61;margin-top:9px"></span>{{ r }}</li></sc-for></ul></section>
+<section id="expertise" aria-labelledby="exp2-h" style="scroll-margin-top:110px;display:flex;flex-direction:column;gap:18px"><h2 id="exp2-h" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(28px,2.8vw,40px));line-height:1.1">{{ P.expH }}</h2><ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:12px"><sc-for list="{{ person.expertise }}" as="x"><li style="background:#fff;border:1px solid #E2DDD2;padding:18px 20px;font-size:16px;font-weight:600;line-height:1.4">{{ x }}</li></sc-for></ul></section>
+<sc-if value="{{ person.hasMiles }}"><section id="milestones" aria-labelledby="miles-h" style="scroll-margin-top:110px;display:flex;flex-direction:column;gap:18px"><h2 id="miles-h" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(28px,2.8vw,40px));line-height:1.1">{{ P.milesH }}</h2><ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column"><sc-for list="{{ person.miles }}" as="r"><li style="display:grid;grid-template-columns:44px 1fr;gap:12px;padding:20px 0;border-top:1px solid #D8D5CE"><span style="font:500 14px/1.6 Oswald,sans-serif;color:#7A6235">{{ r.num }}</span><span style="font-family:Oswald,Heebo,sans-serif;font-size:19px;line-height:1.45;font-weight:500">{{ r.t }}</span></li></sc-for></ol><p style="margin:0;font-size:13px;color:#4E5664">{{ P.milesNote }}</p></section></sc-if>
+<sc-if value="{{ person.hasOrgs }}"><section id="orgs" aria-labelledby="orgs2-h" style="scroll-margin-top:110px;display:flex;flex-direction:column;gap:18px"><h2 id="orgs2-h" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(28px,2.8vw,40px));line-height:1.1">{{ P.orgsH }}</h2><ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px"><sc-for list="{{ person.orgs }}" as="o"><li style="border:1px solid #A58B61;color:#5C4A28;padding:9px 16px;font-size:15px">{{ o }}</li></sc-for></ul></section></sc-if>
+<section id="faq" aria-labelledby="faq-h" style="scroll-margin-top:110px;display:flex;flex-direction:column;gap:16px"><h2 id="faq-h" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(28px,2.8vw,40px));line-height:1.1">{{ P.faqH }}</h2><div style="display:flex;flex-direction:column"><sc-for list="{{ person.qa }}" as="q"><div style="padding:20px 0;border-top:1px solid #D8D5CE;display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-size:18px;font-weight:600;line-height:1.4">{{ q.q }}</h3><p style="margin:0;font-size:17px;line-height:1.7;max-width:760px">{{ q.a }}</p></div></sc-for></div></section>
+<section id="related" aria-labelledby="rel-h" style="scroll-margin-top:110px;display:flex;flex-direction:column;gap:16px"><h2 id="rel-h" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(28px,2.8vw,40px));line-height:1.1">{{ P.relH }}</h2><sc-for list="{{ person.related }}" as="c"><a href="{{ c.href }}" style="display:flex;justify-content:space-between;gap:16px;align-items:center;background:#fff;border:1px solid #E2DDD2;padding:20px 22px;color:#1D2633;text-decoration:none" style-hover="border-color:#A58B61;color:#1D2633"><span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:11px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#7A6235">{{ c.kindLabel }}</span><span style="font-size:17px;font-weight:600">{{ c.name }}</span><span style="font-size:14px;color:#4E5664">{{ c.tagline }}</span></span><span aria-hidden="true" style="color:#7A6235">{{ arrow }}</span></a></sc-for><p style="margin:0;font-size:14px;color:#4E5664;border:1px dashed #CFC9BD;padding:16px 18px">{{ P.relEmpty }}</p></section>
+</div>
+</div>
+</section>
+<section aria-labelledby="others-h" style="padding:clamp(56px,7vw,96px) 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+<h2 id="others-h" style="margin:0 0 32px;font-size:12px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#C2A36B">{{ TM.otherH }}</h2>
+<ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr));gap:32px 18px">
+<sc-for list="{{ others }}" as="m"><li><a href="{{ m.href }}" style="display:flex;flex-direction:column;gap:10px;text-decoration:none;color:#EEE9DF"><div style="aspect-ratio:4/5;overflow:hidden;background:linear-gradient(180deg,#1E2E46,#142133)"><img src="{{ m.img }}" alt="{{ m.alt }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;filter:{{ tone }};-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);transition:filter .6s" style-hover="filter:none"></div><span style="font-size:15px;font-weight:600;line-height:1.3">{{ m.name }}</span><span style="font-size:12px;color:#C2A36B;margin-top:-4px">{{ m.title }}</span></a></li></sc-for>
+</ul>
+</div>
+</section>
+</article>
+</sc-if>
+
+<sc-if value="{{ is.insights }}">
+<section style="padding:clamp(48px,6vw,80px) 0 clamp(72px,10vw,140px)">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:flex;flex-direction:column;gap:40px">
+<div role="group" aria-label="{{ hero.h1 }}" style="display:flex;flex-wrap:wrap;gap:10px"><sc-for list="{{ cats }}" as="c"><button type="button" onClick="{{ c.pick }}" aria-pressed="{{ c.on }}" style="background:{{ c.bg }};color:{{ c.fg }};border:1px solid rgba(194,163,107,.5);padding:9px 16px;font:inherit;font-size:14px;cursor:pointer;transition:background .25s">{{ c.label }}</button></sc-for></div>
+<div style="border:1px solid rgba(238,233,223,.14);padding:clamp(40px,6vw,80px) clamp(24px,5vw,64px);display:flex;flex-direction:column;gap:14px;align-items:flex-start"><span style="width:36px;height:1px;background:#C2A36B"></span><h2 style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(26px,2.6vw,36px));line-height:1.15">{{ I.emptyH }}</h2><p style="margin:0;max-width:620px;font-size:16px;color:#A9AFB8">{{ I.emptyP }}</p></div>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ is.contact }}">
+<section style="background:#F4F1EA;color:#1D2633;padding:clamp(56px,8vw,110px) 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:flex;flex-wrap:wrap;gap:56px clamp(40px,6vw,96px);align-items:flex-start">
+<div style="flex:999 1 520px;min-width:0">
+<sc-if value="{{ formDone }}"><div role="status" style="background:#fff;border-top:2px solid #A58B61;padding:40px;display:flex;flex-direction:column;gap:12px;align-items:flex-start"><h2 style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * 32px);line-height:1.15">{{ C.successH }}</h2><p style="margin:0;font-size:17px">{{ C.successP }}</p><button type="button" onClick="{{ resetForm }}" style="margin-top:8px;background:none;border:0;border-bottom:1px solid #A58B61;color:#7A6235;font:inherit;font-size:15px;font-weight:600;padding:0 0 3px;cursor:pointer">{{ C.again }}</button></div></sc-if>
+<sc-if value="{{ formOpen }}">
+<form noValidate="{{ true }}" onSubmit="{{ submit }}" aria-describedby="privacy-note" style="display:flex;flex-direction:column;gap:24px;position:relative">
+<sc-if value="{{ hasErrors }}"><div role="alert" style="border:1px solid #A33A2B;color:#8A2A1E;background:#fff;padding:14px 18px;font-size:15px">{{ C.errSummary }}</div></sc-if>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px">
+<div style="display:flex;flex-direction:column;gap:8px"><label for="f-name" style="font-size:14px;font-weight:600">{{ C.name }} <span aria-hidden="true" style="color:#7A6235">*</span></label><input id="f-name" name="name" autoComplete="name" required="{{ true }}" value="{{ form.name }}" onChange="{{ on.name }}" aria-invalid="{{ inv.name }}" aria-describedby="e-name" style="box-sizing:border-box;width:100%;background:#fff;border:1px solid {{ bc.name }};padding:14px 16px;font:inherit;font-size:16px;color:#1D2633;border-radius:0"><sc-if value="{{ errs.name }}"><span id="e-name" style="font-size:13px;color:#8A2A1E">{{ errs.name }}</span></sc-if></div>
+<div style="display:flex;flex-direction:column;gap:8px"><label for="f-org" style="font-size:14px;font-weight:600">{{ C.org }}</label><input id="f-org" name="organization" autoComplete="organization" value="{{ form.org }}" onChange="{{ on.org }}" style="box-sizing:border-box;width:100%;background:#fff;border:1px solid #CFC9BD;padding:14px 16px;font:inherit;font-size:16px;color:#1D2633;border-radius:0"></div>
+<div style="display:flex;flex-direction:column;gap:8px"><label for="f-email" style="font-size:14px;font-weight:600">{{ C.email }} <span aria-hidden="true" style="color:#7A6235">*</span></label><input id="f-email" name="email" type="email" dir="ltr" autoComplete="email" required="{{ true }}" value="{{ form.email }}" onChange="{{ on.email }}" aria-invalid="{{ inv.email }}" aria-describedby="e-email" style="box-sizing:border-box;width:100%;background:#fff;border:1px solid {{ bc.email }};padding:14px 16px;font:inherit;font-size:16px;color:#1D2633;border-radius:0;text-align:start"><sc-if value="{{ errs.email }}"><span id="e-email" style="font-size:13px;color:#8A2A1E">{{ errs.email }}</span></sc-if></div>
+<div style="display:flex;flex-direction:column;gap:8px"><label for="f-phone" style="font-size:14px;font-weight:600">{{ C.phone }}</label><input id="f-phone" name="phone" type="tel" dir="ltr" autoComplete="tel" value="{{ form.phone }}" onChange="{{ on.phone }}" style="box-sizing:border-box;width:100%;background:#fff;border:1px solid #CFC9BD;padding:14px 16px;font:inherit;font-size:16px;color:#1D2633;border-radius:0;text-align:start"></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px"><label for="f-subject" style="font-size:14px;font-weight:600">{{ C.subject }}</label><select id="f-subject" name="subject" value="{{ form.subject }}" onChange="{{ on.subject }}" style="box-sizing:border-box;width:100%;background:#fff;border:1px solid #CFC9BD;padding:14px 16px;font:inherit;font-size:16px;color:#1D2633;border-radius:0"><sc-for list="{{ C.subjects }}" as="s"><option value="{{ s }}">{{ s }}</option></sc-for></select></div>
+<div style="display:flex;flex-direction:column;gap:8px"><label for="f-msg" style="font-size:14px;font-weight:600">{{ C.message }} <span aria-hidden="true" style="color:#7A6235">*</span></label><textarea id="f-msg" name="message" rows="6" required="{{ true }}" value="{{ form.message }}" onChange="{{ on.message }}" aria-invalid="{{ inv.message }}" aria-describedby="e-msg" style="box-sizing:border-box;width:100%;background:#fff;border:1px solid {{ bc.message }};padding:14px 16px;font:inherit;font-size:16px;color:#1D2633;border-radius:0;resize:vertical"></textarea><sc-if value="{{ errs.message }}"><span id="e-msg" style="font-size:13px;color:#8A2A1E">{{ errs.message }}</span></sc-if></div>
+<div aria-hidden="true" style="position:absolute;inset-inline-start:-10000px;width:1px;height:1px;overflow:hidden"><label for="f-web">Website</label><input id="f-web" name="website" tabIndex="-1" autoComplete="off" value="{{ form.website }}" onChange="{{ on.website }}"></div>
+<div style="display:flex;flex-direction:column;gap:8px"><label for="f-consent" style="display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start;font-size:15px;line-height:1.5;cursor:pointer"><input id="f-consent" type="checkbox" checked="{{ form.consent }}" onChange="{{ on.consent }}" aria-invalid="{{ inv.consent }}" aria-describedby="e-consent" style="width:20px;height:20px;margin:2px 0 0;accent-color:#7A6235"><span>{{ C.consent }} · <a href="{{ links.privacy }}" style="color:#7A6235">{{ privacyLabel }}</a></span></label><sc-if value="{{ errs.consent }}"><span id="e-consent" style="font-size:13px;color:#8A2A1E">{{ errs.consent }}</span></sc-if></div>
+<div style="display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center"><button type="submit" disabled="{{ sending }}" style="background:#0E1724;color:#EEE9DF;border:0;padding:17px 32px;font:inherit;font-size:15px;font-weight:600;cursor:pointer;transition:background .25s" style-hover="background:#1D2C42">{{ submitLabel }}</button><p id="privacy-note" style="margin:0;font-size:13px;color:#4E5664;max-width:420px">{{ C.privacyNote }}</p></div>
+</form>
+</sc-if>
+</div>
+<aside style="flex:1 1 260px;max-width:380px;border-top:2px solid #A58B61;padding-top:22px;display:flex;flex-direction:column;gap:12px"><h2 style="margin:0;font-size:12px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#7A6235">{{ C.detailsH }}</h2><p style="margin:0;font-size:15px;color:#4E5664;line-height:1.6">{{ C.detailsPending }}</p></aside>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ is.legal }}">
+<section style="background:#F4F1EA;color:#1D2633;padding:clamp(56px,8vw,110px) 0">
+<div style="max-width:880px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:flex;flex-direction:column;gap:36px">
+<p style="margin:0;font-size:13px;color:#4E5664">{{ LG.updated }}</p>
+<sc-for list="{{ LG.sections }}" as="s"><section style="display:flex;flex-direction:column;gap:10px;border-top:1px solid #D8D5CE;padding-top:24px"><h2 style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * 24px);line-height:1.25">{{ s.h }}</h2><p style="margin:0;font-size:17px;line-height:1.75">{{ s.p }}</p></section></sc-for>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ is.faq }}">
+<section style="background:#F4F1EA;color:#1D2633;padding:clamp(56px,8vw,110px) 0">
+<div style="max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:flex;flex-direction:column">
+<sc-for list="{{ faqItems }}" as="q"><section aria-labelledby="{{ q.id }}" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px 64px;padding:32px 0;border-top:1px solid #D8D5CE"><h2 id="{{ q.id }}" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(21px,2vw,27px));line-height:1.25">{{ q.q }}</h2><div style="display:flex;flex-direction:column;gap:12px;max-width:640px"><p style="margin:0;font-size:17px;line-height:1.75;text-wrap:pretty">{{ q.a }}</p><sc-if value="{{ q.href }}"><a href="{{ q.href }}" style="align-self:flex-start;color:#7A6235;font-weight:600;font-size:14px;text-decoration:none;border-bottom:1px solid #A58B61;padding-bottom:2px" style-hover="color:#1D2633">{{ ui.readMore }} {{ arrow }}</a></sc-if></div></section></sc-for>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ is.checklist }}">
+<section dir="ltr" lang="en" style="padding:clamp(48px,6vw,80px) 0 clamp(72px,10vw,120px)">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:32px">
+<sc-for list="{{ CL.groups }}" as="g"><div style="border-top:2px solid {{ g.color }};padding-top:20px;display:flex;flex-direction:column;gap:14px"><h2 style="margin:0;font:600 18px/1.3 Oswald,sans-serif">{{ g.h }}</h2><ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column"><sc-for list="{{ g.items }}" as="it"><li style="display:grid;grid-template-columns:18px 1fr;gap:8px;padding:11px 0;border-top:1px solid rgba(238,233,223,.1);font:14px/1.55 Oswald,sans-serif;color:#CFC9BD"><span aria-hidden="true" style="width:8px;height:8px;margin-top:6px;background:{{ g.color }}"></span>{{ it }}</li></sc-for></ul></div></sc-for>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ is.notfound }}">
+<section style="padding:0 0 clamp(72px,10vw,140px)"><div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px)"><a href="{{ links.home }}" style="color:#C2A36B;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(194,163,107,.5);padding-bottom:3px">{{ ui.backHome }} {{ arrow }}</a></div></section>
+</sc-if>
+
+<sc-if value="{{ showCta }}">
+<section aria-labelledby="cta-h" style="background:#0A111B;border-top:1px solid #C2A36B;padding:clamp(64px,8vw,110px) 0">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px 60px">
+<div style="display:flex;flex-direction:column;gap:14px"><h2 id="cta-h" style="margin:0;font-family:Oswald,Karantina,sans-serif;font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(34px,4.2vw,60px));line-height:1.05">{{ cta.h }}</h2><p style="margin:0;color:#A9AFB8;font-size:17px">{{ cta.p }}</p></div>
+<a href="{{ links.contact }}" style="background:#C2A36B;color:#0E1724;text-decoration:none;font-size:15px;font-weight:600;padding:17px 30px;transition:background .25s" style-hover="background:#D9BE88;color:#0E1724">{{ ui.contactCta }} {{ arrow }}</a>
+</div>
+</section>
+</sc-if>
+</main>
+
+<footer style="background:#0A111B;border-top:1px solid rgba(238,233,223,.08);padding:clamp(56px,7vw,88px) 0 32px;font-size:14px">
+<div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:flex;flex-direction:column;gap:56px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:40px">
+<div style="display:flex;flex-direction:column;gap:18px;grid-column:span 2;min-width:0;max-width:460px"><img src="{{ logoSrc }}" alt="LBH" width="52" height="52" style="width:52px;height:52px;border-radius:50%;object-fit:cover"><p style="margin:0;color:#A9AFB8;line-height:1.7">{{ ui.footerTag }}</p></div>
+<nav aria-label="{{ ui.footerNavH }}" style="display:flex;flex-direction:column;gap:12px"><span style="font-size:11px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#C2A36B">{{ ui.footerNavH }}</span><sc-for list="{{ nav }}" as="n"><a href="{{ n.href }}" style="color:#CFC9BD;text-decoration:none" style-hover="color:#EEE9DF">{{ n.label }}</a></sc-for><a href="{{ links.faq }}" style="color:#CFC9BD;text-decoration:none" style-hover="color:#EEE9DF">{{ ui.faqLabel }}</a></nav>
+<nav aria-label="{{ ui.footerLegalH }}" style="display:flex;flex-direction:column;gap:12px"><span style="font-size:11px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#C2A36B">{{ ui.footerLegalH }}</span><sc-for list="{{ legalLinks }}" as="n"><a href="{{ n.href }}" style="color:#CFC9BD;text-decoration:none" style-hover="color:#EEE9DF">{{ n.label }}</a></sc-for><a href="{{ switchHref }}" hreflang="{{ ui.switchLang }}" lang="{{ ui.switchLang }}" style="color:#C2A36B;text-decoration:none;margin-top:8px">{{ ui.switchTo }}</a></nav>
+</div>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 40px;border-top:1px solid rgba(238,233,223,.08);padding-top:24px;color:#8E96A3;font-size:13px"><span>{{ ui.copyright }}</span><span style="max-width:720px">{{ ui.disclaimer }}</span></div>
+</div>
+</footer>
+
+<sc-if value="{{ showSeo }}">
+<aside dir="ltr" lang="en" aria-label="SEO preview" style="position:fixed;bottom:16px;right:16px;z-index:80;width:min(380px,calc(100vw - 32px));max-height:60vh;overflow:auto;background:#0A111B;border:1px solid #C2A36B;padding:16px 18px;font:12px/1.55 ui-monospace,Menlo,monospace;color:#CFC9BD;box-shadow:0 16px 40px rgba(0,0,0,.4);display:flex;flex-direction:column;gap:8px">
+<span style="font:600 11px Oswald,sans-serif;letter-spacing:.16em;color:#C2A36B">SEO / GEO · CURRENT ROUTE</span>
+<div><span style="color:#8E96A3">path </span>{{ seo.path }}</div>
+<div><span style="color:#8E96A3">title </span>{{ seo.title }}</div>
+<div><span style="color:#8E96A3">description </span>{{ seo.desc }}</div>
+<div><span style="color:#8E96A3">canonical </span>{{ seo.canonical }}</div>
+<div><span style="color:#8E96A3">hreflang he </span>{{ seo.he }}</div>
+<div><span style="color:#8E96A3">hreflang en </span>{{ seo.en }}</div>
+<div><span style="color:#8E96A3">x-default </span>{{ seo.he }}</div>
+<div><span style="color:#8E96A3">robots </span>{{ seo.robots }}</div>
+<div><span style="color:#8E96A3">JSON-LD </span>{{ seo.types }}</div>
+</aside>
+</sc-if>
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showSeo&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Review&quot;},&quot;portraits&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;grayscale&quot;,&quot;color&quot;],&quot;default&quot;:&quot;grayscale&quot;,&quot;tsType&quot;:&quot;'grayscale' | 'color'&quot;,&quot;section&quot;:&quot;Look&quot;},&quot;heroImage&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Look&quot;}}">
+class Component extends DCLogic {
+  state = { route: this.parse(), menu: false, w: typeof window !== 'undefined' ? window.innerWidth : 1280, srcs: null, logo: null, cat: -1,
+    form: { name: '', org: '', email: '', phone: '', subject: '', message: '', website: '', consent: false }, errs: {}, sending: false, done: false, t0: Date.now() };
+
+  parse() {
+    const raw = (location.hash || '').replace(/^#/, '');
+    const [p, anchor] = raw.split('#');
+    const segs = (p || '').split('/').filter(Boolean);
+    const lang = segs[0] === 'en' ? 'en' : segs[0] === 'he' ? 'he' : null;
+    return { lang: lang || 'he', rest: lang ? segs.slice(1) : [], anchor: anchor || '', valid: !!lang };
+  }
+
+  componentDidMount() {
+    if (!this.state.route.valid) history.replaceState(null, '', '#/he/');
+    this.onHash = () => { const r = this.parse(); if (!r.valid) { history.replaceState(null, '', '#/he/'); } this.setState({ route: this.parse(), menu: false }, () => this.afterRoute()); };
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('hashchange', this.onHash);
+    window.addEventListener('resize', this.onResize);
+    const read = (n) => {
+      const els = [...document.querySelectorAll('img[data-portrait]')];
+      const lg = document.querySelector('img[data-logo]');
+      if (els.length === 7 && window.LBH && window.LBH_GEO) this.setState({ srcs: els.map(e => e.getAttribute('src')), logo: lg && lg.getAttribute('src') }, () => this.afterRoute(true));
+      else if (n < 100) setTimeout(() => read(n + 1), 60);
+    };
+    read(0);
+  }
+  componentWillUnmount() { window.removeEventListener('hashchange', this.onHash); window.removeEventListener('resize', this.onResize); }
+  componentDidUpdate() { this.applyHead(); }
+
+  afterRoute(initial) {
+    const a = this.state.route.anchor;
+    requestAnimationFrame(() => {
+      const el = a && document.getElementById(a);
+      if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 96, behavior: initial ? 'auto' : 'smooth' });
+      else if (!initial) window.scrollTo({ top: 0, behavior: 'instant' });
+    });
+    this.applyHead();
+  }
+
+  pageKey() {
+    const r = this.state.route.rest, C = window.LBH;
+    const k = r[0] || 'home';
+    if (k === 'team' && r[1]) return C && C.people.some(p => p.slug === r[1]) && r.length === 2 ? 'profile' : 'notfound';
+    if (r.length > 1) return 'notfound';
+    return ['home', 'about', 'strategy', 'track-record', 'team', 'insights', 'contact', 'privacy', 'accessibility', 'terms', 'checklist', 'faq'].includes(k) ? k : 'notfound';
+  }
+
+  pathFor(lang) { const r = this.state.route.rest; return '/' + lang + '/' + (r.length ? r.join('/') + '/' : ''); }
+
+  seoData() {
+    const C = window.LBH; if (!C) return null;
+    const { lang } = this.state.route; const key = this.pageKey(); const url = C.site.url;
+    const other = lang === 'he' ? 'en' : 'he';
+    let title, desc;
+    const person = key === 'profile' ? C.people.find(p => p.slug === this.state.route.rest[1]) : null;
+    if (person) { const L = person[lang]; title = L.seoTitle || (L.name + ' | ' + L.title + ', LBH'); desc = L.summary.length > 158 ? L.summary.slice(0, 155).replace(/\s+\S*$/, '') + '…' : L.summary; }
+    else if (key === 'notfound') { title = C.ui[lang].notFoundH + ' | LBH'; desc = C.ui[lang].notFoundP; }
+    else { [title, desc] = C.meta[key][lang]; }
+    const canonical = url + this.pathFor(lang);
+    const org = { '@type': 'Organization', '@id': url + '/#organization', name: 'LBH', url: url + '/', logo: url + '/assets/lbh-logo.png',
+      founder: [{ '@id': url + '/team/shimon-ben-hamo/#person' }, { '@id': url + '/team/ofer-linchevski/#person' }] };
+    const site = { '@type': 'WebSite', '@id': url + '/#website', url: url + '/', name: 'LBH', publisher: { '@id': url + '/#organization' }, inLanguage: ['he', 'en'] };
+    const crumbs = this.crumbData(lang);
+    const bc = { '@type': 'BreadcrumbList', '@id': canonical + '#breadcrumb', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.label, item: url + c.path })) };
+    const page = { '@type': key === 'profile' ? 'ProfilePage' : key === 'about' ? 'AboutPage' : key === 'contact' ? 'ContactPage' : 'WebPage', '@id': canonical + '#webpage', url: canonical, name: title, description: desc, inLanguage: lang, isPartOf: { '@id': url + '/#website' }, about: { '@id': url + '/#organization' }, breadcrumb: { '@id': canonical + '#breadcrumb' } };
+    if (key === 'faq') { page['@type'] = 'FAQPage'; page.mainEntity = C.faq[lang].items.map(it => ({ '@type': 'Question', name: it[0], acceptedAnswer: { '@type': 'Answer', text: it[1] } })); }
+    const graph = [org, site, page]; if (key !== 'home') graph.push(bc);
+    if (person) {
+      const L = person[lang], O = person[other];
+      const pid = url + '/team/' + person.slug + '/#person';
+      page.mainEntity = { '@id': pid }; page.about = { '@id': pid };
+      graph.push({ '@type': 'Person', '@id': pid, name: L.name, alternateName: O.name, jobTitle: L.title, description: L.summary, url: canonical, image: url + '/images/team/' + person.slug + '.jpg',
+        worksFor: { '@id': url + '/#organization' }, knowsAbout: L.expertise, alumniOf: (person.en.orgs || []).filter(o => o !== 'LBH').map(o => ({ '@type': 'Organization', name: o })) });
+    }
+    return { title, desc, canonical, he: url + this.pathFor('he'), en: url + this.pathFor('en'), robots: key === 'checklist' || key === 'notfound' ? 'noindex, nofollow' : 'index, follow', ld: { '@context': 'https://schema.org', '@graph': graph }, types: graph.map(g => g['@type']).join(', '), path: this.pathFor(lang) };
+  }
+
+  crumbData(lang) {
+    const C = window.LBH, ui = C.ui[lang], key = this.pageKey(), r = this.state.route.rest;
+    const out = [{ label: ui.home, path: '/' + lang + '/' }];
+    const nav = Object.fromEntries(ui.nav), legal = Object.fromEntries(ui.legal);
+    if (key === 'profile') { out.push({ label: nav.team, path: '/' + lang + '/team/' }); out.push({ label: C.people.find(p => p.slug === r[1])[lang].name, path: '/' + lang + '/team/' + r[1] + '/' }); }
+    else if (key !== 'home') out.push({ label: nav[key] || legal[key] || (key === 'faq' ? ui.faqLabel : '') || (key === 'checklist' ? 'Checklist' : ui.notFoundH), path: '/' + lang + '/' + (r[0] ? r[0] + '/' : '') });
+    return out;
+  }
+
+  applyHead() {
+    const s = this.seoData(); if (!s) return;
+    document.title = s.title;
+    const set = (sel, make, attrs) => { let el = document.head.querySelector(sel); if (!el) { el = document.createElement(make); document.head.appendChild(el); } Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v)); };
+    set('meta[name="description"]', 'meta', { name: 'description', content: s.desc });
+    set('meta[name="robots"]', 'meta', { name: 'robots', content: s.robots });
+    set('link[rel="canonical"]', 'link', { rel: 'canonical', href: s.canonical });
+    set('link[hreflang="he"]', 'link', { rel: 'alternate', hreflang: 'he', href: s.he });
+    set('link[hreflang="en"]', 'link', { rel: 'alternate', hreflang: 'en', href: s.en });
+    set('link[hreflang="x-default"]', 'link', { rel: 'alternate', hreflang: 'x-default', href: s.he });
+    set('meta[property="og:title"]', 'meta', { property: 'og:title', content: s.title });
+    set('meta[property="og:description"]', 'meta', { property: 'og:description', content: s.desc });
+    set('meta[property="og:url"]', 'meta', { property: 'og:url', content: s.canonical });
+    set('meta[property="og:locale"]', 'meta', { property: 'og:locale', content: this.state.route.lang === 'he' ? 'he_IL' : 'en_US' });
+    set('meta[name="twitter:card"]', 'meta', { name: 'twitter:card', content: 'summary_large_image' });
+    let ld = document.getElementById('lbh-jsonld');
+    if (!ld) { ld = document.createElement('script'); ld.type = 'application/ld+json'; ld.id = 'lbh-jsonld'; document.head.appendChild(ld); }
+    ld.textContent = JSON.stringify(s.ld);
+    document.documentElement.lang = this.state.route.lang; document.documentElement.dir = this.state.route.lang === 'he' ? 'rtl' : 'ltr';
+  }
+
+  validate(f, C) {
+    const e = {};
+    if (!f.name.trim()) e.name = 'req';
+    if (!f.email.trim()) e.email = 'req'; else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.email.trim())) e.email = 'badEmail';
+    if (!f.message.trim()) e.message = 'req';
+    if (!f.consent) e.consent = 'needConsent';
+    return e;
+  }
+
+  renderVals() {
+    const C = window.LBH;
+    if (!C || !window.LBH_GEO || !this.state.srcs) return { ready: false };
+    const { lang } = this.state.route; const other = lang === 'he' ? 'en' : 'he';
+    const ui = C.ui[lang]; const key = this.pageKey();
+    const href = (p) => '#/' + lang + '/' + (p ? p + '/' : '');
+    const arrow = lang === 'he' ? '←' : '→';
+    const num = (i) => String(i + 1).padStart(2, '0');
+    const img = (i) => this.state.srcs[i];
+    const zoomOf = () => 1;
+    const tone = (this.props.portraits ?? 'grayscale') === 'grayscale' ? 'grayscale(1)' : 'none';
+    const people = C.people.map(p => ({ slug: p.slug, href: href('team/' + p.slug), img: img(p.img), zoom: zoomOf(p.slug), name: p[lang].name, title: p[lang].title, card: p[lang].card, alt: p[lang].name + ', ' + p[lang].title + ', LBH' }));
+    const bySlug = Object.fromEntries(people.map(p => [p.slug, p]));
+    const cases = C.cases.map(c => { const L = c[lang]; return { slug: c.slug, href: href('track-record') + '#' + c.slug, name: L.name, tagline: L.tagline, period: L.period, imgCap: L.imgCap, context: L.context, challenge: L.challenge, outcome: L.outcome,
+      isInv: c.kind === 'investment', isLead: c.kind === 'leadership', kindLabel: c.kind === 'investment' ? ui.investment : ui.leadership, isGadot: c.img === 'gadot', noImg: c.img !== 'gadot',
+      leaderList: c.leaders.map(s => bySlug[s]), leaders: c.leaders, pillars: L.pillars.map((p, i) => ({ num: num(i), h: p[0], items: p[1] })), story: (L.story || []).map(([h2, p]) => ({ h: h2, p })), hasStory: (L.story || []).length > 0 }; });
+    const nav = ui.nav.map(([k, l]) => { const cur = key === k || (key === 'profile' && k === 'team'); return { href: href(k), label: l, aria: cur ? 'page' : undefined, color: cur ? '#EEE9DF' : '#B9B4A9', border: cur ? '#C2A36B' : 'transparent' }; });
+    const crumbs = this.crumbData(lang).map((c, i, a) => ({ label: c.label, href: '#' + c.path, link: i < a.length - 1, last: i === a.length - 1 }));
+    let person = null, others = [], toc = [];
+    const P = C.profile[lang];
+    if (key === 'profile') {
+      const src = C.people.find(p => p.slug === this.state.route.rest[1]); const L = src[lang];
+      person = { ...L, slug: src.slug, img: img(src.img), zoom: zoomOf(src.slug), maxW: '480px', alt: L.name + ', ' + L.title + ', LBH', hasMiles: L.milestones.length > 0, hasOrgs: L.orgs.length > 0,
+        miles: L.milestones.map((t, i) => ({ num: num(i), t })), qa: (L.faq || []).map(([q, a]) => ({ q, a })), related: cases.filter(c => c.leaders.includes(src.slug)) };
+      others = people.filter(p => p.slug !== src.slug);
+      const go = (id) => (e) => { e.preventDefault(); const el = document.getElementById(id); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 96, behavior: 'smooth' }); };
+      toc = [['bio', P.bioH], ['roles', P.rolesH], ['expertise', P.expH]].concat(person.hasMiles ? [['milestones', P.milesH]] : []).concat(person.hasOrgs ? [['orgs', P.orgsH]] : []).concat([['faq', P.faqH], ['related', P.relH]])
+        .map(([id, label]) => ({ href: href('team/' + src.slug) + '#' + id, label, go: go(id) }));
+    }
+    const heroMap = { about: C.about[lang], strategy: C.strategy[lang], 'track-record': C.track[lang], team: C.team[lang], insights: C.insights[lang], contact: C.contact[lang], faq: C.faq[lang] };
+    let hero = null;
+    if (heroMap[key]) hero = { h1: heroMap[key].h1, lead: heroMap[key].lead };
+    else if (C.legal[key]) hero = { h1: C.legal[key][lang].h1, lead: '' };
+    else if (key === 'checklist') hero = { h1: C.checklist.h1, lead: C.checklist.lead };
+    else if (key === 'notfound') hero = { h1: ui.notFoundH, lead: ui.notFoundP };
+    const Cf = C.contact[lang]; const f = this.state.form; const errs = Object.fromEntries(Object.entries(this.state.errs).map(([k, v]) => [k, Cf[v]]));
+    const on = {}; ['name', 'org', 'email', 'phone', 'subject', 'message', 'website'].forEach(k => { on[k] = (e) => { const v = e.target.value; this.setState(s => { const ne = { ...s.errs }; delete ne[k]; return { form: { ...s.form, [k]: v }, errs: ne }; }); }; });
+    on.consent = (e) => { const v = e.target.checked; this.setState(s => { const ne = { ...s.errs }; delete ne.consent; return { form: { ...s.form, consent: v }, errs: ne }; }); };
+    const submit = (e) => {
+      e.preventDefault();
+      if (this.state.form.website || Date.now() - this.state.t0 < 2500) { this.setState({ done: true }); return; }
+      const ne = this.validate(this.state.form, Cf);
+      if (Object.keys(ne).length) { this.setState({ errs: ne }, () => { const first = ['name', 'email', 'message', 'consent'].find(k => ne[k]); const el = document.getElementById(first === 'message' ? 'f-msg' : 'f-' + first); if (el) el.focus(); }); return; }
+      this.setState({ sending: true }); setTimeout(() => this.setState({ sending: false, done: true }), 900);
+    };
+    const cats = [C.insights[lang].all].concat(C.insights[lang].cats).map((label, i) => { const on2 = this.state.cat === i - 1; return { label, on: on2, bg: on2 ? '#C2A36B' : 'transparent', fg: on2 ? '#0E1724' : '#CFC9BD', pick: () => this.setState({ cat: i - 1 }) }; });
+    const toneColor = { ok: '#6FA27A', check: '#C2A36B', no: '#B35A4A' };
+    const LGsrc = C.legal[key] ? C.legal[key][lang] : null;
+    const H = C.home[lang];
+    const s = this.seoData();
+    const mobile = this.state.w < 1000;
+    return {
+      ready: true, lang, dir: lang === 'he' ? 'rtl' : 'ltr', hs: lang === 'he' ? 1.34 : 1, hw: lang === 'he' ? 700 : 500, ls: lang === 'he' ? '0' : '0.005em', bw: lang === 'he' ? 400 : 300, els: lang === 'he' ? '.04em' : '.16em',
+      ui, arrow, nav, logoSrc: this.state.logo || 'assets/lbh-logo.png',
+      links: { home: href(''), about: href('about'), strategy: href('strategy'), track: href('track-record'), team: href('team'), contact: href('contact'), privacy: href('privacy'), faq: href('faq') },
+      legalLinks: ui.legal.map(([k, l]) => ({ href: href(k), label: l })), privacyLabel: Object.fromEntries(ui.legal).privacy,
+      switchHref: '#' + this.pathFor(other),
+      desktop: !mobile, mobile, asidePos: this.state.w < 900 ? 'static' : 'sticky', menuOpen: this.state.menu, menuVisible: mobile && this.state.menu, menuLabel: this.state.menu ? ui.close : ui.menu,
+      toggleMenu: () => this.setState(st => ({ menu: !st.menu })), closeMenu: () => this.setState({ menu: false }),
+      skipToMain: (e) => { e.preventDefault(); const m = document.getElementById('main'); if (m) m.focus(); },
+      is: { home: key === 'home', about: key === 'about', strategy: key === 'strategy', track: key === 'track-record', team: key === 'team', profile: key === 'profile', insights: key === 'insights', contact: key === 'contact', legal: !!C.legal[key], checklist: key === 'checklist', faq: key === 'faq', notfound: key === 'notfound' },
+      showHero: !!hero, hero, crumbs, showCta: !['contact', 'checklist', 'notfound'].includes(key) && !C.legal[key],
+      cta: key === 'profile' ? { h: P.ctaH, p: P.ctaP } : { h: H.ctaH, p: H.ctaP },
+      heroImage: this.props.heroImage ?? true, tone,
+      H, sectors: C.sectors.map((x, i) => ({ slug: x.slug, num: num(i), name: x[lang][0], desc: x[lang][1], long: x.long ? x.long[lang] : [], href: href('strategy') + '#' + x.slug })),
+      pillars: C.pillars.map((x, i) => ({ num: num(i), name: x[lang][0], desc: x[lang][1] })),
+      people, cases, person, others, toc, P, TM: C.team[lang],
+      A: { ...C.about[lang], sections: C.about[lang].sections.map(([h, p]) => ({ h, p })) },
+      S: { ...C.strategy[lang], approach: C.strategy[lang].approach.map(([h2, p]) => ({ h: h2, p })) }, T: C.track[lang], I: C.insights[lang], cats,
+      C: Cf, form: f, on, submit, errs, hasErrors: Object.keys(errs).length > 0,
+      inv: { name: !!errs.name, email: !!errs.email, message: !!errs.message, consent: !!errs.consent },
+      bc: { name: errs.name ? '#A33A2B' : '#CFC9BD', email: errs.email ? '#A33A2B' : '#CFC9BD', message: errs.message ? '#A33A2B' : '#CFC9BD' },
+      sending: this.state.sending, submitLabel: this.state.sending ? Cf.sending : Cf.submit, formDone: this.state.done, formOpen: !this.state.done,
+      resetForm: () => this.setState({ done: false, errs: {}, t0: Date.now() - 3000, form: { name: '', org: '', email: '', phone: '', subject: '', message: '', website: '', consent: false } }),
+      LG: LGsrc ? { updated: LGsrc.updated, sections: LGsrc.sections.map(([h, p]) => ({ h, p })) } : null,
+      CL: { groups: C.checklist.groups.map(g => ({ ...g, color: toneColor[g.tone] })) },
+      showSeo: this.props.showSeo ?? false, seo: s,
+      faqItems: C.faq[lang].items.map(([q, a, pg, anc, slug], i) => ({ id: 'q' + (i + 1), q, a, href: slug ? href('team/' + slug) : pg ? href(pg) + (anc ? '#' + anc : '') : '' }))
+    };
+  }
+}
+</script>
+</body>
+</html>

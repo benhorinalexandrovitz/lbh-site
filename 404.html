@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>LBH</title>
+<script>
+  // Static hosts serve this for unknown paths: map /<base>/he/team/x/ onto the hash router at /<base>/#/he/team/x/
+  (function () {
+    var segs = location.pathname.split('/');
+    var i = segs.findIndex(function (s) { return s === 'he' || s === 'en'; });
+    var base = (i === -1 ? segs.slice(0, 2) : segs.slice(0, i)).join('/') + '/';
+    var route = i === -1 ? '/he/' : '/' + segs.slice(i).join('/');
+    location.replace(base + '#' + route);
+  })();
+</script>
+</head>
+<body style="background:#0E1724"></body>
+</html>

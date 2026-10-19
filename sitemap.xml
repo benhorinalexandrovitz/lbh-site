@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://lbh.example/he/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/he/about/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/about/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/about/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/about/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/he/strategy/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/strategy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/strategy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/strategy/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/strategy/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/strategy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/strategy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/strategy/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/he/track-record/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/track-record/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/track-record/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/track-record/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/track-record/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/track-record/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/track-record/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/track-record/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/he/team/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/team/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/team/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/team/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/team/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/team/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/team/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/team/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/he/insights/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/insights/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/insights/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/insights/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/insights/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/insights/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/insights/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/insights/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/he/contact/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/contact/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/contact/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/contact/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/he/privacy/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/privacy/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/privacy/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/privacy/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/he/accessibility/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/accessibility/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/accessibility/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/accessibility/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/accessibility/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/accessibility/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/accessibility/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/accessibility/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/he/terms/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/terms/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/terms/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/terms/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/he/team/shimon-ben-hamo/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/team/shimon-ben-hamo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/team/shimon-ben-hamo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/team/shimon-ben-hamo/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/team/shimon-ben-hamo/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/team/shimon-ben-hamo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/team/shimon-ben-hamo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/team/shimon-ben-hamo/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/he/team/ofer-linchevski/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/team/ofer-linchevski/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/team/ofer-linchevski/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/team/ofer-linchevski/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/team/ofer-linchevski/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/team/ofer-linchevski/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/team/ofer-linchevski/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/team/ofer-linchevski/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/he/team/mordy-ben-ami/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/team/mordy-ben-ami/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/team/mordy-ben-ami/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/team/mordy-ben-ami/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/team/mordy-ben-ami/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/team/mordy-ben-ami/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/team/mordy-ben-ami/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/team/mordy-ben-ami/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/he/team/moni-katz/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/team/moni-katz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/team/moni-katz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/team/moni-katz/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/team/moni-katz/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/team/moni-katz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/team/moni-katz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/team/moni-katz/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/he/team/dori-grossman/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/team/dori-grossman/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/team/dori-grossman/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/team/dori-grossman/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/team/dori-grossman/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/team/dori-grossman/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/team/dori-grossman/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/team/dori-grossman/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/he/team/yifat-feiglin/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/team/yifat-feiglin/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/team/yifat-feiglin/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/team/yifat-feiglin/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/team/yifat-feiglin/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/team/yifat-feiglin/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/team/yifat-feiglin/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/team/yifat-feiglin/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/he/team/assaf-reich/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/team/assaf-reich/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/team/assaf-reich/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/team/assaf-reich/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/team/assaf-reich/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/team/assaf-reich/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/team/assaf-reich/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/team/assaf-reich/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/he/faq/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/faq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/faq/"/>
+  </url>
+  <url>
+    <loc>https://lbh.example/en/faq/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lbh.example/he/faq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbh.example/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbh.example/he/faq/"/>
+  </url>
+</urlset>
