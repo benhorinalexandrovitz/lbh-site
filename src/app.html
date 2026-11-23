@@ -44,7 +44,7 @@ window.__resources = {
 <!-- ================= HOME ================= -->
 <sc-if value="{{ is.home }}" hint-placeholder-val="{{ true }}">
 <section aria-labelledby="hero-h" style="position:relative;overflow:hidden;min-height:clamp(560px,86vh,860px);display:flex;align-items:flex-end;background:#0E1724">
-<sc-if value="{{ heroImage }}"><img src="{{ assets.hero }}" alt="{{ H.heroAlt }}" width="2000" height="1071" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;animation:lbhZoom 2.4s cubic-bezier(.2,.7,.2,1) both"></sc-if>
+<sc-if value="{{ heroImage }}"><img src="{{ assets.hero }}" alt="{{ heroAlt }}" width="1600" height="900" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;animation:lbhZoom 2.4s cubic-bezier(.2,.7,.2,1) both"></sc-if>
 <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(to {{ gradTo }},rgba(14,23,36,.94) 0%,rgba(14,23,36,.78) 42%,rgba(14,23,36,.25) 100%)"></div>
 <div aria-hidden="true" style="position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(to top,#0E1724 0%,rgba(14,23,36,0) 100%)"></div>
 <div style="position:relative;width:100%;max-width:1320px;margin:0 auto;padding:clamp(96px,14vw,180px) clamp(20px,5vw,64px) clamp(56px,7vw,96px);display:flex;flex-direction:column;gap:clamp(24px,3.4vw,40px)">
@@ -60,7 +60,7 @@ window.__resources = {
 
 <section aria-labelledby="what-h" style="background:#F4F1EA;color:#1D2633;padding:clamp(72px,10vw,140px) 0">
 <div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:40px 80px">
-<div style="display:flex;flex-direction:column;gap:18px"><span style="font-size:12px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#7A6235">{{ H.introEyebrow }}</span><h2 id="what-h" style="margin:0;font-family:var(--fh);font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(34px,4vw,58px));line-height:1.08;text-wrap:balance">{{ H.introH }}</h2></div>
+<div style="display:flex;flex-direction:column;gap:18px"><span style="font-size:12px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#7A6235">{{ H.introEyebrow }}</span><h2 id="what-h" style="margin:0;font-family:var(--fh);font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(34px,4vw,58px));line-height:1.08;text-wrap:balance">{{ H.introH }}</h2><img src="{{ intro.src }}" alt="{{ intro.alt }}" loading="lazy" width="800" height="450" style="width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block;margin-top:14px"></div>
 <div style="display:flex;flex-direction:column;gap:20px">
 <sc-for list="{{ H.introP }}" as="p"><p style="margin:0;font-size:clamp(17px,1.3vw,19px);line-height:1.75;text-wrap:pretty">{{ p }}</p></sc-for>
 <a href="{{ links.about }}" style="align-self:flex-start;margin-top:8px;color:#7A6235;font-weight:600;font-size:15px;text-decoration:none;border-bottom:1px solid #A58B61;padding-bottom:3px" style-hover="color:#1D2633">{{ H.aboutLink }} {{ arrow }}</a>
@@ -83,7 +83,7 @@ window.__resources = {
 <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:40px 24px">
 <sc-for list="{{ funds }}" as="c" hint-placeholder-count="3"><li style="display:flex"><a href="{{ c.href }}" style="flex:1;display:flex;flex-direction:column;text-decoration:none;color:#EEE9DF;background:#122033;border:1px solid rgba(238,233,223,.08);transition:border-color .35s,transform .35s" style-hover="border-color:rgba(194,163,107,.6);transform:translateY(-4px);color:#EEE9DF">
 <div style="aspect-ratio:16/10;overflow:hidden;position:relative;background:#0F1A29">
-<sc-if value="{{ c.isPhoto }}"><img src="{{ c.image }}" alt="{{ c.visualAlt }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></sc-if>
+<sc-if value="{{ c.isPhoto }}"><img src="{{ c.image }}" alt="{{ c.imgAlt }}" loading="lazy" width="800" height="450" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s" style-hover="transform:scale(1.04)"></sc-if>
 <sc-if value="{{ c.isDan }}"><svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="{{ c.visualAlt }}" style="width:100%;height:100%;display:block"><rect width="400" height="250" fill="#13233A"></rect><path d="M-10 190 C 80 190, 110 120, 200 120 S 330 60, 410 60" fill="none" stroke="#C2A36B" strokeWidth="3"></path><path d="M-10 220 C 90 215, 150 170, 230 168 S 340 140, 410 128" fill="none" stroke="#5E86B8" strokeWidth="2"></path><path d="M-10 150 C 60 150, 120 80, 210 70 S 320 30, 410 24" fill="none" stroke="#3B5A80" strokeWidth="2" strokeDasharray="6 7"></path><circle cx="200" cy="120" r="7" fill="#0E1724" stroke="#C2A36B" strokeWidth="3"></circle><circle cx="96" cy="171" r="5" fill="#C2A36B"></circle><circle cx="312" cy="78" r="5" fill="#C2A36B"></circle><circle cx="230" cy="168" r="5" fill="#5E86B8"></circle><circle cx="120" cy="196" r="4" fill="#5E86B8"></circle></svg></sc-if>
 <sc-if value="{{ c.isMankai }}"><svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="{{ c.visualAlt }}" style="width:100%;height:100%;display:block"><rect width="400" height="250" fill="#14281F"></rect><circle cx="60" cy="60" r="16" fill="#7FA66A" fillOpacity=".85"></circle><circle cx="84" cy="70" r="11" fill="#9CC47F" fillOpacity=".8"></circle><circle cx="140" cy="130" r="22" fill="#6E9A5B" fillOpacity=".7"></circle><circle cx="170" cy="112" r="12" fill="#A9CF8B" fillOpacity=".8"></circle><circle cx="250" cy="80" r="18" fill="#7FA66A" fillOpacity=".75"></circle><circle cx="276" cy="96" r="9" fill="#BFE09F" fillOpacity=".8"></circle><circle cx="320" cy="170" r="24" fill="#6E9A5B" fillOpacity=".65"></circle><circle cx="350" cy="150" r="12" fill="#9CC47F" fillOpacity=".8"></circle><circle cx="90" cy="200" r="14" fill="#7FA66A" fillOpacity=".7"></circle><circle cx="220" cy="200" r="10" fill="#A9CF8B" fillOpacity=".75"></circle><circle cx="200" cy="40" r="8" fill="#BFE09F" fillOpacity=".7"></circle><circle cx="370" cy="40" r="10" fill="#7FA66A" fillOpacity=".6"></circle><circle cx="30" cy="140" r="7" fill="#BFE09F" fillOpacity=".7"></circle></svg></sc-if>
 </div>
@@ -97,7 +97,7 @@ window.__resources = {
 <div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 60px;margin-bottom:56px"><div style="display:flex;flex-direction:column;gap:16px"><span dir="ltr" style="font-size:12px;font-weight:600;letter-spacing:.18em;color:#C2A36B;align-self:flex-start">BUY &amp; BUILD</span><h2 id="appr-h" style="margin:0;font-family:var(--fh);font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(36px,4.4vw,64px));line-height:1.05">{{ H.apprH }}</h2></div><p style="margin:0;max-width:440px;color:#A9AFB8;font-size:16px">{{ H.apprIntro }}</p></div>
 <ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:40px 32px">
-<sc-for list="{{ pillars }}" as="p" hint-placeholder-count="4"><li style="border-top:1px solid #C2A36B;padding-top:24px;display:flex;flex-direction:column;gap:12px"><span style="font:500 36px/1 Oswald,sans-serif;color:#C2A36B">{{ p.num }}</span><h3 style="margin:0;font-family:var(--fh);font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * 23px);line-height:1.2">{{ p.name }}</h3><p style="margin:0;font-size:15px;color:#A9AFB8;line-height:1.65">{{ p.desc }}</p><p style="margin:0;font-size:14px;color:#CFC9BD;line-height:1.6;border-inline-start:2px solid rgba(194,163,107,.6);padding-inline-start:12px">{{ p.ex }}</p></li></sc-for>
+<sc-for list="{{ pillars }}" as="p" hint-placeholder-count="4"><li style="display:flex;flex-direction:column;gap:12px"><img src="{{ p.img }}" alt="{{ p.alt }}" loading="lazy" width="800" height="450" style="width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block;margin-bottom:12px;border-bottom:1px solid #C2A36B;padding-bottom:0"><span style="font:500 36px/1 Oswald,sans-serif;color:#C2A36B">{{ p.num }}</span><h3 style="margin:0;font-family:var(--fh);font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * 23px);line-height:1.2">{{ p.name }}</h3><p style="margin:0;font-size:15px;color:#A9AFB8;line-height:1.65">{{ p.desc }}</p><p style="margin:0;font-size:14px;color:#CFC9BD;line-height:1.6;border-inline-start:2px solid rgba(194,163,107,.6);padding-inline-start:12px">{{ p.ex }}</p></li></sc-for>
 </ol>
 </div>
 </section>
@@ -127,6 +127,7 @@ window.__resources = {
 <nav aria-label="Breadcrumb"><ol style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;font-size:13px;color:#8E96A3"><sc-for list="{{ crumbs }}" as="c"><li style="display:flex;gap:8px"><sc-if value="{{ c.link }}"><a href="{{ c.href }}" style="color:#A9AFB8;text-decoration:none" style-hover="color:#EEE9DF">{{ c.label }}</a><span aria-hidden="true">/</span></sc-if><sc-if value="{{ c.last }}"><span aria-current="page" style="color:#EEE9DF">{{ c.label }}</span></sc-if></li></sc-for></ol></nav>
 <h1 id="page-h" style="margin:0;max-width:1100px;font-family:var(--fh);font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(42px,6vw,88px));line-height:1.04;text-wrap:balance;animation:lbhUp .9s cubic-bezier(.2,.7,.2,1) both">{{ hero.h1 }}</h1>
 <sc-if value="{{ hero.lead }}"><div style="display:flex;gap:24px;align-items:flex-start"><span style="flex:none;width:36px;height:1px;background:#C2A36B;margin-top:15px"></span><p style="margin:0;max-width:780px;font-size:clamp(18px,1.5vw,22px);line-height:1.6;color:#CFC9BD;text-wrap:pretty">{{ hero.lead }}</p></div></sc-if>
+<sc-if value="{{ hero.hasImg }}"><figure style="margin:12px 0 0;display:flex;flex-direction:column;gap:8px"><img src="{{ hero.img }}" alt="{{ hero.alt }}" width="1600" height="900" fetchpriority="high" style="width:100%;height:auto;aspect-ratio:21/8;object-fit:cover;display:block;animation:lbhFade 1.2s .2s both"><figcaption style="font-size:12px;color:#8E96A3">{{ ui.illus }}</figcaption></figure></sc-if>
 </div>
 </section>
 </sc-if>
@@ -198,7 +199,7 @@ window.__resources = {
 <h2 id="ifunds-h" style="margin:0;font-size:12px;font-weight:600;letter-spacing:var(--els);text-transform:uppercase;color:#C2A36B">{{ IV.fundsH }}</h2>
 <sc-for list="{{ funds }}" as="c"><article aria-labelledby="f-{{ c.slug }}" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:32px 56px;align-items:center;border-top:1px solid rgba(238,233,223,.14);padding-top:40px">
 <div style="aspect-ratio:16/10;overflow:hidden;position:relative;background:#0F1A29">
-<sc-if value="{{ c.isPhoto }}"><img src="{{ c.image }}" alt="{{ c.visualAlt }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></sc-if>
+<sc-if value="{{ c.isPhoto }}"><img src="{{ c.image }}" alt="{{ c.imgAlt }}" loading="lazy" width="800" height="450" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s" style-hover="transform:scale(1.04)"></sc-if>
 <sc-if value="{{ c.isDan }}"><svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="{{ c.visualAlt }}" style="width:100%;height:100%;display:block"><rect width="400" height="250" fill="#13233A"></rect><path d="M-10 190 C 80 190, 110 120, 200 120 S 330 60, 410 60" fill="none" stroke="#C2A36B" strokeWidth="3"></path><path d="M-10 220 C 90 215, 150 170, 230 168 S 340 140, 410 128" fill="none" stroke="#5E86B8" strokeWidth="2"></path><path d="M-10 150 C 60 150, 120 80, 210 70 S 320 30, 410 24" fill="none" stroke="#3B5A80" strokeWidth="2" strokeDasharray="6 7"></path><circle cx="200" cy="120" r="7" fill="#0E1724" stroke="#C2A36B" strokeWidth="3"></circle><circle cx="96" cy="171" r="5" fill="#C2A36B"></circle><circle cx="312" cy="78" r="5" fill="#C2A36B"></circle><circle cx="230" cy="168" r="5" fill="#5E86B8"></circle><circle cx="120" cy="196" r="4" fill="#5E86B8"></circle></svg></sc-if>
 <sc-if value="{{ c.isMankai }}"><svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="{{ c.visualAlt }}" style="width:100%;height:100%;display:block"><rect width="400" height="250" fill="#14281F"></rect><circle cx="60" cy="60" r="16" fill="#7FA66A" fillOpacity=".85"></circle><circle cx="84" cy="70" r="11" fill="#9CC47F" fillOpacity=".8"></circle><circle cx="140" cy="130" r="22" fill="#6E9A5B" fillOpacity=".7"></circle><circle cx="170" cy="112" r="12" fill="#A9CF8B" fillOpacity=".8"></circle><circle cx="250" cy="80" r="18" fill="#7FA66A" fillOpacity=".75"></circle><circle cx="276" cy="96" r="9" fill="#BFE09F" fillOpacity=".8"></circle><circle cx="320" cy="170" r="24" fill="#6E9A5B" fillOpacity=".65"></circle><circle cx="350" cy="150" r="12" fill="#9CC47F" fillOpacity=".8"></circle><circle cx="90" cy="200" r="14" fill="#7FA66A" fillOpacity=".7"></circle><circle cx="220" cy="200" r="10" fill="#A9CF8B" fillOpacity=".75"></circle><circle cx="200" cy="40" r="8" fill="#BFE09F" fillOpacity=".7"></circle><circle cx="370" cy="40" r="10" fill="#7FA66A" fillOpacity=".6"></circle><circle cx="30" cy="140" r="7" fill="#BFE09F" fillOpacity=".7"></circle></svg></sc-if>
 </div>
@@ -239,7 +240,7 @@ window.__resources = {
 <p style="margin:0;max-width:640px;font-size:clamp(17px,1.4vw,20px);line-height:1.65;color:#CFC9BD;text-wrap:pretty">{{ fund.lead }}</p>
 </div>
 <div style="aspect-ratio:16/11;overflow:hidden;position:relative;background:#0F1A29;animation:lbhFade 1.2s .2s both">
-<sc-if value="{{ fund.isPhoto }}"><img src="{{ fund.image }}" alt="{{ fund.visualAlt }}" style="width:100%;height:100%;object-fit:cover;display:block"></sc-if>
+<sc-if value="{{ fund.isPhoto }}"><img src="{{ fund.heroSrc }}" alt="{{ fund.heroAlt }}" width="1600" height="900" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;display:block"></sc-if>
 <sc-if value="{{ fund.isDan }}"><svg viewBox="0 0 400 275" preserveAspectRatio="xMidYMid slice" role="img" aria-label="{{ fund.visualAlt }}" style="width:100%;height:100%;display:block"><rect width="400" height="275" fill="#13233A"></rect><path d="M-10 210 C 80 210, 110 130, 200 130 S 330 66, 410 66" fill="none" stroke="#C2A36B" strokeWidth="3"></path><path d="M-10 245 C 90 240, 150 186, 230 184 S 340 154, 410 140" fill="none" stroke="#5E86B8" strokeWidth="2"></path><path d="M-10 165 C 60 165, 120 88, 210 77 S 320 33, 410 26" fill="none" stroke="#3B5A80" strokeWidth="2" strokeDasharray="6 7"></path><circle cx="200" cy="130" r="8" fill="#0E1724" stroke="#C2A36B" strokeWidth="3"></circle><circle cx="96" cy="190" r="5" fill="#C2A36B"></circle><circle cx="312" cy="86" r="5" fill="#C2A36B"></circle><circle cx="230" cy="184" r="5" fill="#5E86B8"></circle><circle cx="120" cy="216" r="4" fill="#5E86B8"></circle></svg></sc-if>
 <sc-if value="{{ fund.isMankai }}"><svg viewBox="0 0 400 275" preserveAspectRatio="xMidYMid slice" role="img" aria-label="{{ fund.visualAlt }}" style="width:100%;height:100%;display:block"><rect width="400" height="275" fill="#14281F"></rect><circle cx="60" cy="60" r="16" fill="#7FA66A" fillOpacity=".85"></circle><circle cx="84" cy="70" r="11" fill="#9CC47F" fillOpacity=".8"></circle><circle cx="140" cy="140" r="22" fill="#6E9A5B" fillOpacity=".7"></circle><circle cx="170" cy="122" r="12" fill="#A9CF8B" fillOpacity=".8"></circle><circle cx="250" cy="86" r="18" fill="#7FA66A" fillOpacity=".75"></circle><circle cx="276" cy="102" r="9" fill="#BFE09F" fillOpacity=".8"></circle><circle cx="320" cy="186" r="24" fill="#6E9A5B" fillOpacity=".65"></circle><circle cx="350" cy="164" r="12" fill="#9CC47F" fillOpacity=".8"></circle><circle cx="90" cy="220" r="14" fill="#7FA66A" fillOpacity=".7"></circle><circle cx="220" cy="222" r="10" fill="#A9CF8B" fillOpacity=".75"></circle><circle cx="200" cy="40" r="8" fill="#BFE09F" fillOpacity=".7"></circle><circle cx="370" cy="40" r="10" fill="#7FA66A" fillOpacity=".6"></circle><circle cx="30" cy="150" r="7" fill="#BFE09F" fillOpacity=".7"></circle></svg></sc-if>
 </div>
@@ -250,6 +251,7 @@ window.__resources = {
 <section aria-label="{{ b.h }}" style="background:{{ b.bg }};color:{{ b.fg }};padding:{{ b.pad }}">
 <div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:flex;flex-direction:column;gap:32px">
 <h2 style="margin:0;font-family:var(--fh);font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * clamp(26px,2.8vw,40px));line-height:1.12">{{ b.h }}</h2>
+<sc-if value="{{ b.hasImg }}"><figure style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="{{ b.imgSrc }}" alt="{{ b.imgAlt }}" loading="lazy" width="1600" height="900" style="width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;display:block"><figcaption style="font-size:12px;color:#8E96A3">{{ ui.illus }}</figcaption></figure></sc-if>
 
 <sc-if value="{{ b.isStats }}"><ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:32px 28px"><sc-for list="{{ b.items }}" as="s"><li style="border-top:1px solid rgba(194,163,107,.55);padding-top:20px;display:flex;flex-direction:column;gap:8px"><span dir="ltr" style="align-self:flex-start;font:500 clamp(40px,4.4vw,60px)/1 Oswald,sans-serif;color:#EEE9DF">{{ s.v }}</span><span style="font-size:16px;font-weight:600;color:#C2A36B">{{ s.u }}</span><span style="font-size:15px;color:#A9AFB8;line-height:1.5">{{ s.l }}</span></li></sc-for></ul></sc-if>
 
@@ -324,7 +326,7 @@ window.__resources = {
 <div style="max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 60px;margin-bottom:48px"><h2 id="bb-h" dir="ltr" style="margin:0;font-family:Oswald,sans-serif;font-weight:500;letter-spacing:0;font-size:clamp(36px,4.4vw,64px);line-height:1.05">{{ S.bbH }}</h2><p style="margin:0;max-width:440px;color:#A9AFB8;font-size:16px">{{ S.bbP }}</p></div>
 <ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:40px 32px">
-<sc-for list="{{ pillars }}" as="p"><li style="border-top:1px solid rgba(194,163,107,.6);padding:28px 0 8px;display:flex;flex-direction:column;gap:14px"><span style="font:500 40px/1 Oswald,sans-serif;color:#C2A36B">{{ p.num }}</span><h3 style="margin:0;font-family:var(--fh);font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * 22px);line-height:1.25">{{ p.name }}</h3><p style="margin:0;font-size:15px;color:#A9AFB8;line-height:1.65">{{ p.desc }}</p><p style="margin:0;font-size:14px;color:#CFC9BD;line-height:1.6;border-inline-start:2px solid rgba(194,163,107,.6);padding-inline-start:12px">{{ p.ex }}</p></li></sc-for>
+<sc-for list="{{ pillars }}" as="p"><li style="padding:0 0 8px;display:flex;flex-direction:column;gap:14px"><img src="{{ p.img }}" alt="{{ p.alt }}" loading="lazy" width="800" height="450" style="width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block;margin-bottom:10px"><span style="font:500 40px/1 Oswald,sans-serif;color:#C2A36B">{{ p.num }}</span><h3 style="margin:0;font-family:var(--fh);font-weight:var(--hw);letter-spacing:var(--ls);font-size:calc(var(--hs) * 22px);line-height:1.25">{{ p.name }}</h3><p style="margin:0;font-size:15px;color:#A9AFB8;line-height:1.65">{{ p.desc }}</p><p style="margin:0;font-size:14px;color:#CFC9BD;line-height:1.6;border-inline-start:2px solid rgba(194,163,107,.6);padding-inline-start:12px">{{ p.ex }}</p></li></sc-for>
 </ol>
 </div>
 </section>
@@ -607,12 +609,13 @@ class Component extends DCLogic {
     const arrow = lang === 'he' ? '←' : '→';
     const num = (i) => String(i + 1).padStart(2, '0');
     const tone = (this.props.portraits ?? 'grayscale') === 'grayscale' ? 'grayscale(1)' : 'none';
+    const pic = (id, w) => id && C.images[id] ? { src: this.asset('assets/img/v2/' + id + '-' + w + '.webp'), alt: C.images[id][lang] } : { src: '', alt: '' };
     const pub = C.people.filter(p => p.published);
     const people = pub.map(p => ({ slug: p.slug, href: href('team/' + p.slug), img: this.asset(p.img), name: p[lang].name, title: p[lang].title, card: p[lang].card, summary: p[lang].summary, alt: p[lang].name + ', ' + p[lang].title + ', LBH', isFounder: C.founders.includes(p.slug) }));
     const bySlug = Object.fromEntries(people.map(p => [p.slug, p]));
     const founders = people.filter(p => p.isFounder), members = people.filter(p => !p.isFounder);
     const funds = C.funds.filter(f => f.published).map((f) => { const L = f[lang]; return { slug: f.slug, href: href('investments/' + f.slug), name: L.name, eyebrow: L.eyebrow, sector: L.sector, short: L.short, title: L.title, lead: L.lead, visualAlt: L.visualAlt,
-      image: f.image ? this.asset(f.image) : '', isPhoto: f.visual === 'photo', isDan: f.visual === 'dan', isMankai: f.visual === 'mankai', leaders: f.leaders }; });
+      image: pic(f.card, 800).src, imgAlt: pic(f.card, 800).alt, heroSrc: pic(f.hero, 1600).src, heroAlt: pic(f.hero, 1600).alt, isPhoto: f.visual === 'photo', isDan: f.visual === 'dan', isMankai: f.visual === 'mankai', leaders: f.leaders }; });
     const fundBySlug = Object.fromEntries(funds.map(f => [f.slug, f]));
     const nav = ui.nav.map(([k, l]) => { const cur = key === k || (key === 'profile' && k === 'team') || (key === 'fund' && k === 'investments'); return { href: href(k === 'home' ? '' : k), label: l, aria: cur ? 'page' : undefined, color: cur ? '#EEE9DF' : '#B9B4A9', border: cur ? '#C2A36B' : 'transparent' }; });
     const crumbs = this.crumbData(lang).map((c, i, a) => ({ label: c.label, href: this.link(c.path), link: i < a.length - 1, last: i === a.length - 1 }));
@@ -621,7 +624,7 @@ class Component extends DCLogic {
 
     const kp = this.state.kp;
     const kpis = C.kpis.map(k => ({ value: k.value, dec: k.dec, pre: k[lang].pre, num: (k.value * Math.max(0, Math.min(1, kp))).toFixed(k.dec), unit: k[lang].unit, label: k[lang].label }));
-    const pillars = C.pillars.map((x, i) => ({ num: num(i), name: x[lang][0], desc: x[lang][1], ex: x[lang][2] }));
+    const pillars = C.pillars.map((x, i) => ({ num: num(i), name: x[lang][0], desc: x[lang][1], ex: x[lang][2], img: pic(x.img, 800).src, alt: pic(x.img, 800).alt }));
 
     const RS = C.returns;
     const retRow = (id) => ({ name: RS.rows[id][lang], v: RS.rows[id].v });
@@ -639,6 +642,7 @@ class Component extends DCLogic {
         const t = b.type, theme = themeOf[t] || dark;
         const o = { h: b.h, bg: theme.bg, fg: theme.fg, isStats: t === 'stats', isText: t === 'text', isChart: t === 'chart', isEngines: t === 'engines', isAssets: t === 'assets', isCorridor: t === 'corridor', isReturns: t === 'returns', isCallout: t === 'callout',
           isTimeline: t === 'timeline', isSplit: t === 'split', isDeal: t === 'deal', isStages: t === 'stages', isFaq: t === 'faq', isSources: t === 'sources' };
+        if (b.img) { const im = pic(b.img, 1600); o.hasImg = true; o.imgSrc = im.src; o.imgAlt = im.alt; }
         if (t === 'stats') o.items = b.items.map(([v, u, l]) => ({ v, u, l }));
         if (t === 'text' || t === 'callout') o.p = b.p;
         if (t === 'chart') { const max = Math.max(...b.bars.map(x => x[1])); o.unit = b.unit; o.mult = b.mult; o.multL = b.multL; o.note = b.note;
@@ -677,7 +681,7 @@ class Component extends DCLogic {
 
     const heroMap = { about: C.about[lang], investments: C.investments[lang], strategy: C.strategy[lang], team: C.team[lang], media: C.media[lang] };
     let hero = null;
-    if (heroMap[key]) hero = { h1: heroMap[key].h1, lead: heroMap[key].lead };
+    if (heroMap[key]) { const im = pic(C.pageImages[key], 1600); hero = { h1: heroMap[key].h1, lead: heroMap[key].lead, hasImg: !!im.src, img: im.src, alt: im.alt }; }
     else if (C.legal[key]) hero = { h1: C.legal[key][lang].h1, lead: '' };
     else if (key === 'notfound') hero = { h1: ui.notFoundH, lead: ui.notFoundP };
 
@@ -692,7 +696,7 @@ class Component extends DCLogic {
       ready: true, lang, dir: lang === 'he' ? 'rtl' : 'ltr', hs: lang === 'he' ? 1.34 : 1, hw: lang === 'he' ? 700 : 500, ls: lang === 'he' ? '0' : '0.005em', bw: lang === 'he' ? 400 : 300, els: lang === 'he' ? '.04em' : '.16em',
       gradTo: lang === 'he' ? 'left' : 'right',
       fh: lang === 'he' ? 'Karantina,Heebo,sans-serif' : 'Oswald,sans-serif', fb: lang === 'he' ? 'Heebo,system-ui,sans-serif' : 'Oswald,Heebo,system-ui,sans-serif',
-      ui, arrow, nav, assets: { logo: this.asset('assets/lbh-logo.png'), hero: this.asset('assets/img/hero-port.jpg') },
+      ui, arrow, nav, assets: { logo: this.asset('assets/lbh-logo.png'), hero: pic(C.pageImages.hero, 1600).src }, heroAlt: pic(C.pageImages.hero, 1600).alt, intro: pic(C.pageImages.homeIntro, 800),
       links: { home: href(''), about: href('about'), investments: href('investments'), strategy: href('strategy'), team: href('team'), media: href('media'), privacy: href('privacy') },
       legalLinks: ui.legal.map(([k, l]) => ({ href: href(k), label: l })),
       switchHref: this.link(this.pathFor(other)),

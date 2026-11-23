@@ -5,6 +5,33 @@
 window.LBH = {
   site: { url: 'https://benhorinalexandrovitz.github.io/lbh-site', name: 'LBH', logo: 'assets/lbh-logo.png', ogImage: 'assets/og-image.jpg' },
 
+
+  /* Illustrative images (generated for the site; not photographs of the group's assets or operations).
+     Files: assets/img/v2/<id>-1600.webp and <id>-800.webp */
+  images: {
+    '01-home-hero-haifa-port': { he: 'מבט על מפרץ חיפה והנמל מהכרמל (הדמיה)', en: 'View over Haifa Bay and the port from Mount Carmel (illustration)' },
+    '02-home-about-management': { he: 'צוות הנהלה דן בתוכנית עסקית סביב שולחן ישיבות (הדמיה)', en: 'A management team reviewing a business plan around a table (illustration)' },
+    '03-home-investment-dan': { he: 'אוטובוס חשמלי בחניון טעינה עירוני (הדמיה)', en: 'An electric bus at an urban charging depot (illustration)' },
+    '04-home-investment-gadot': { he: 'מיכלי אחסון, מכלית כביש ואוניית מטען במסוף ימי (הדמיה)', en: 'Storage tanks, a road tanker and a tanker vessel at a marine terminal (illustration)' },
+    '05-home-investment-mankai': { he: 'בדיקת צמחי מים זעירים בבריכת גידול בחממה (הדמיה)', en: 'Inspecting tiny aquatic plants in a greenhouse growing pond (illustration)' },
+    '06-home-model-core-business': { he: 'מנהל תפעול בחניון אוטובוסים חשמליים (הדמיה)', en: 'An operations manager at an electric bus depot (illustration)' },
+    '07-home-model-operational-efficiency': { he: 'צוות תפעול במרכז לוגיסטי (הדמיה)', en: 'An operations team at a logistics center (illustration)' },
+    '08-home-model-innovation': { he: 'מהנדסים במתקן תעשייתי מתקדם (הדמיה)', en: 'Engineers at an advanced industrial facility (illustration)' },
+    '09-home-model-acquisitions': { he: 'דיון על עסקה מול מפה, עם נמל ברקע (הדמיה)', en: 'A transaction discussion over a map, with a port in the background (illustration)' },
+    '10-about-group': { he: 'צוות השקעות בוחן תוכניות תשתית (הדמיה)', en: 'An investment team reviewing infrastructure plans (illustration)' },
+    '11-investments-overview': { he: 'חניון אוטובוסים ונמל מכולות: תחבורה ולוגיסטיקה (הדמיה)', en: 'A bus depot and a container port: transportation and logistics (illustration)' },
+    '12-dan-transport-hero': { he: 'נוסעים עולים לאוטובוס עירוני (הדמיה)', en: 'Passengers boarding a city bus (illustration)' },
+    '13-dan-light-rail': { he: 'רכבת קלה ברחוב עירוני (הדמיה)', en: 'A light rail train on a city street (illustration)' },
+    '14-dan-electric-fleet': { he: 'צי אוטובוסים חשמליים ועמדות טעינה (הדמיה)', en: 'An electric bus fleet and charging points (illustration)' },
+    '15-dan-real-estate-separation': { he: 'מתחם עירוני מעורב שימושים לצד מסילה (הדמיה)', en: 'A mixed-use urban development beside a rail line (illustration)' },
+    '16-gadot-port-haifa': { he: 'אוניית מכולות במסוף נמל (הדמיה)', en: 'A container ship at a port terminal (illustration)' },
+    '17-gadot-supply-chain': { he: 'מסוף מיכלי אחסון ומכלית כביש לחוף הים (הדמיה)', en: 'A coastal tank storage terminal and a road tanker (illustration)' },
+    '18-gadot-global-expansion': { he: 'מסוף כימיקלים לאורך תעלה באירופה (הדמיה)', en: 'A chemical terminal along a European canal (illustration)' },
+    '19-mankai-greenhouse-beeri': { he: 'גידול צמחי מים בחממה בנגב המערבי (הדמיה)', en: 'Growing aquatic plants in a greenhouse in the western Negev (illustration)' },
+    '20-strategy-buy-build': { he: 'צוות דן באסטרטגיית צמיחה מול מודל של מתחם תעשייתי (הדמיה)', en: 'A team discussing a growth strategy over a model of an industrial site (illustration)' }
+  },
+  pageImages: { hero: '01-home-hero-haifa-port', homeIntro: '02-home-about-management', about: '10-about-group', investments: '11-investments-overview', strategy: '20-strategy-buy-build' },
+
   ui: {
     he: {
       skip: 'דלג לתוכן', menu: 'תפריט', close: 'סגירה', home: 'ראשי', switchTo: 'English', switchShort: 'EN', switchLang: 'en',
@@ -14,8 +41,8 @@ window.LBH = {
       footerNavH: 'ניווט', footerLegalH: 'מידע משפטי',
       legal: [['privacy', 'מדיניות פרטיות'], ['accessibility', 'הצהרת נגישות'], ['terms', 'תנאי שימוש']],
       copyright: '© 2026 LBH. כל הזכויות שמורות.',
-      disclaimer: 'המידע באתר נועד למטרות מידע כללי בלבד ואינו מהווה הצעה, ייעוץ השקעות או שיווק השקעות. ביצועי עבר אינם מבטיחים תוצאות עתידיות.',
-      leaders: 'הובלה מטעם LBH', notFoundH: 'הדף לא נמצא', notFoundP: 'ייתכן שהקישור שגוי או שהדף הוסר.', backHome: 'חזרה לדף הבית',
+      disclaimer: 'המידע באתר נועד למטרות מידע כללי בלבד ואינו מהווה הצעה, ייעוץ השקעות או שיווק השקעות. ביצועי עבר אינם מבטיחים תוצאות עתידיות. התמונות באתר הן הדמיות להמחשה.',
+      leaders: 'הובלה מטעם LBH', illus: 'הדמיה להמחשה', notFoundH: 'הדף לא נמצא', notFoundP: 'ייתכן שהקישור שגוי או שהדף הוסר.', backHome: 'חזרה לדף הבית',
       founder: 'מייסד', fund: 'קרן'
     },
     en: {
@@ -26,8 +53,8 @@ window.LBH = {
       footerNavH: 'Navigate', footerLegalH: 'Legal',
       legal: [['privacy', 'Privacy Policy'], ['accessibility', 'Accessibility'], ['terms', 'Terms of Use']],
       copyright: '© 2026 LBH. All rights reserved.',
-      disclaimer: 'The information on this website is for general information only and does not constitute an offer, investment advice or investment marketing. Past performance does not guarantee future results.',
-      leaders: 'LBH leadership', notFoundH: 'Page not found', notFoundP: 'The link may be incorrect or the page may have been removed.', backHome: 'Back to home',
+      disclaimer: 'The information on this website is for general information only and does not constitute an offer, investment advice or investment marketing. Past performance does not guarantee future results. Images on this website are illustrations.',
+      leaders: 'LBH leadership', illus: 'Illustration', notFoundH: 'Page not found', notFoundP: 'The link may be incorrect or the page may have been removed.', backHome: 'Back to home',
       founder: 'Founder', fund: 'Fund'
     }
   },
@@ -106,19 +133,19 @@ window.LBH = {
 
   /* Buy & Build axes (order per deck note: core business first, acquisitions last). */
   pillars: [
-    { he: ['פיתוח פעילות הליבה', 'חיזוק העסק הקיים, הרחבת פעילות, שיפור יכולות, פיתוח תשתיות ויצירת מנועי צמיחה.', 'בדן: חישמול כ-1,200 אוטובוסים, כ-600 עמדות טעינה וזכייה במכרזי הרכבת הקלה.'],
+    { img: '06-home-model-core-business', he: ['פיתוח פעילות הליבה', 'חיזוק העסק הקיים, הרחבת פעילות, שיפור יכולות, פיתוח תשתיות ויצירת מנועי צמיחה.', 'בדן: חישמול כ-1,200 אוטובוסים, כ-600 עמדות טעינה וזכייה במכרזי הרכבת הקלה.'],
       en: ['Core Business Development', 'Strengthening the existing business, expanding activity, upgrading capabilities, developing infrastructure and creating growth engines.', 'At Dan: electrifying some 1,200 buses, about 600 charging points and light rail tender wins.'] },
-    { he: ['התייעלות תפעולית', 'תהליכי רכש, מבנים ארגוניים, ניהול כוח אדם, פריון ושיפור ביצועים.', 'בדן: הפחתת שיעור אי-הביצוע מ-9% ל-1.5%.'],
+    { img: '07-home-model-operational-efficiency', he: ['התייעלות תפעולית', 'תהליכי רכש, מבנים ארגוניים, ניהול כוח אדם, פריון ושיפור ביצועים.', 'בדן: הפחתת שיעור אי-הביצוע מ-9% ל-1.5%.'],
       en: ['Operational Excellence', 'Procurement, organizational structure, workforce management, productivity and performance improvement.', 'At Dan: non-performance rate cut from 9% to 1.5%.'] },
-    { he: ['חדשנות ופיתוח עסקי', 'הטמעת טכנולוגיות, הקמת פעילויות חדשות, פיתוח מוצרים וכניסה לשווקים.', 'בגדות: מתקן Blending & Tolling בבלגיה עם יכולות low-flash.'],
+    { img: '08-home-model-innovation', he: ['חדשנות ופיתוח עסקי', 'הטמעת טכנולוגיות, הקמת פעילויות חדשות, פיתוח מוצרים וכניסה לשווקים.', 'בגדות: מתקן Blending & Tolling בבלגיה עם יכולות low-flash.'],
       en: ['Innovation & Business Development', 'Adopting technologies, launching new activities, developing products and entering new markets.', 'At Gadot: a blending and tolling facility in Belgium with low-flash capabilities.'] },
-    { he: ['רכישות ואינטגרציה', 'רכישות משלימות, הרחבת פלטפורמות ויצירת יתרונות תפעוליים ומסחריים.', 'בגדות: שבע רכישות בין 2021 ל-2026, ובהן נמל חיפה לצד אדאני.'],
+    { img: '09-home-model-acquisitions', he: ['רכישות ואינטגרציה', 'רכישות משלימות, הרחבת פלטפורמות ויצירת יתרונות תפעוליים ומסחריים.', 'בגדות: שבע רכישות בין 2021 ל-2026, ובהן נמל חיפה לצד אדאני.'],
       en: ['Mergers & Acquisitions', 'Add-on acquisitions, platform expansion and operational and commercial synergies.', 'At Gadot: seven acquisitions from 2021 to 2026, including Haifa Port alongside Adani.'] }
   ],
 
   /* ---------- Investment funds ---------- */
   funds: [
-    { slug: 'dan', published: true, visual: 'dan', image: '', leaders: ['shimon-ben-hamo', 'ofer-linchevski'],
+    { slug: 'dan', published: true, visual: 'photo', card: '03-home-investment-dan', hero: '12-dan-transport-hero', leaders: ['shimon-ben-hamo', 'ofer-linchevski'],
       he: { name: 'דן תחבורה', eyebrow: 'קרן 1 · 2020', sector: 'תחבורה ותשתיות',
         short: 'מהלך ההשבחה של קבוצת דן: פיתוח פעילות התחבורה, התייעלות, ייזום תשתיות ובניית פלטפורמת צמיחה. השליטה בדן תחבורה נמכרה ב-2026 לפי שווי חברה אפקטיבי של כ-2.8 מיליארד ש"ח.',
         title: 'דן תחבורה - מחברת תחבורה מסורתית לפלטפורמת תשתיות צומחת',
@@ -129,7 +156,7 @@ window.LBH = {
         title: 'Dan Transportation - From a Legacy Operator to a Growing Infrastructure Platform',
         lead: 'The Dan investment demonstrates LBH\'s ability to identify potential in an established company, lead operational and business change, develop growth engines and build a broad transportation and infrastructure platform.',
         visualAlt: 'Abstract illustration of transit lines' } },
-    { slug: 'gadot', published: true, visual: 'photo', image: 'assets/img/gadot-sea.jpg', leaders: ['ofer-linchevski', 'shimon-ben-hamo'],
+    { slug: 'gadot', published: true, visual: 'photo', card: '04-home-investment-gadot', hero: '17-gadot-supply-chain', leaders: ['ofer-linchevski', 'shimon-ben-hamo'],
       he: { name: 'גדות', eyebrow: 'קרן 2 · 2021', sector: 'לוגיסטיקה ושרשראות אספקה',
         short: 'קבוצה העוסקת בלוגיסטיקה, בהובלה, באחסון ובשרשראות אספקה לכימיקלים, לשמנים ולדלקים, תוך פיתוח פעילות בינלאומית והשבחת יכולות תפעוליות.',
         title: 'גדות - מפלטפורמה משפחתית לקבוצה לוגיסטית גלובלית',
@@ -140,7 +167,7 @@ window.LBH = {
         title: 'Gadot - From a Family-Owned Platform to a Global Logistics Group',
         lead: 'Gadot demonstrates LBH\'s value creation strategy: building a broad supply chain for chemicals, oils and fuels, combining maritime and land operations, expanding internationally, completing add-on acquisitions and developing strategic infrastructure.',
         visualAlt: 'A cargo ship at sea (illustrative image)' } },
-    { slug: 'mankai', published: true, visual: 'mankai', image: '', leaders: ['shimon-ben-hamo', 'ofer-linchevski'],
+    { slug: 'mankai', published: true, visual: 'photo', card: '05-home-investment-mankai', hero: '19-mankai-greenhouse-beeri', leaders: ['shimon-ben-hamo', 'ofer-linchevski'],
       he: { name: 'מנקאי', eyebrow: 'קרן 3 · 2022', sector: 'פוד-טק',
         short: 'רכישת פעילות חברת הפוד-טק הינומן, המגדלת את צמח המנקאי בחממות קיבוץ בארי, לאחר הליך חדלות פירעון. שיקום הפעילות ופיתוח שווקים בינלאומיים.',
         title: 'מנקאי והינומן: מזיהוי הזדמנות לשיקום ולצמיחה',
@@ -192,7 +219,7 @@ window.LBH = {
     dan: {
       he: [
         { type: 'stats', h: 'נתוני מפתח', items: [['כ-2.8', 'מיליארד ש"ח', 'שווי חברה אפקטיבי של דן תחבורה בעסקת מכירת השליטה, 2026 (לפי פרסומים)'], ['3.2x', '', 'צמיחה ב-EBITDA של דן סולו, 2019–2025 (נתוני הקבוצה)'], ['7.9x', '', 'תשואה על ההשקעות בדן תחבורה (נתוני הקבוצה)'], ['כ-1,200', '', 'אוטובוסים שחושמלו בתקופת ההשקעה (נתוני הקבוצה)']] },
-        { type: 'text', h: 'החברה וההשקעה', p: ['דן היא חברת התחבורה הציבורית השנייה בגודלה בישראל. ב-2019 התקשרו בית ההשקעות Value Base וקרן LBH תשתיות, בניהול שמעון בן חמו ועופר לינצ\'בסקי, ברכישת 40% ממניות דן מידי חברי הקואופרטיב לשעבר, לפי שווי חברה של כ-1.26 מיליארד ש"ח. הרכישה הושלמה בתחילת 2020, ושנה לאחר מכן הוגדלה ההחזקה ל-50% לפי אותו שווי.', 'בעת הכניסה להשקעה התבססה דן בעיקר על הפעלת קווי אוטובוס, עם שיעור אי-ביצוע של כ-9%. נציגי הקרן כיהנו בדירקטוריון החברה והובילו, יחד עם ההנהלה, תוכנית רב-שנתית לחיזוק פעילות הליבה, להתייעלות ולכניסה לתחומי תשתית חדשים.'] },
+        { img: '13-dan-light-rail', type: 'text', h: 'החברה וההשקעה', p: ['דן היא חברת התחבורה הציבורית השנייה בגודלה בישראל. ב-2019 התקשרו בית ההשקעות Value Base וקרן LBH תשתיות, בניהול שמעון בן חמו ועופר לינצ\'בסקי, ברכישת 40% ממניות דן מידי חברי הקואופרטיב לשעבר, לפי שווי חברה של כ-1.26 מיליארד ש"ח. הרכישה הושלמה בתחילת 2020, ושנה לאחר מכן הוגדלה ההחזקה ל-50% לפי אותו שווי.', 'בעת הכניסה להשקעה התבססה דן בעיקר על הפעלת קווי אוטובוס, עם שיעור אי-ביצוע של כ-9%. נציגי הקרן כיהנו בדירקטוריון החברה והובילו, יחד עם ההנהלה, תוכנית רב-שנתית לחיזוק פעילות הליבה, להתייעלות ולכניסה לתחומי תשתית חדשים.'] },
         { type: 'timeline', h: 'ציר הזמן של ההשקעה', note: 'Class A ו-Class B הן מחלקות ההשקעה של הקרן, לפי נתוני הקבוצה.', items: [
           ['2019', 'חתימה על רכישת 40%', 'Value Base וקרן LBH תשתיות התקשרו ברכישת 40% ממניות דן, לפי שווי של כ-1.26 מיליארד ש"ח.', 'done'],
           ['2020', 'השלמת הרכישה (Class A)', 'הקרן הפכה לבעלת השליטה בדן לצד חברי החברה.', 'done'],
@@ -203,7 +230,7 @@ window.LBH = {
           ['פברואר 2026', 'חתימה על מכירת השליטה בדן תחבורה', 'לפי שווי חברה אפקטיבי של כ-2.8 מיליארד ש"ח.', 'done'],
           ['יוני 2026', 'השלמת מכירת החזקות Value LBH', 'השלב הראשון הושלם לאחר אישור רשות התחרות.', 'done'],
           ['אוגוסט 2026', 'מזכר הבנות דן נדל"ן–דוניץ אלעד', 'מזכר הבנות לא מחייב למיזוג. העסקה טרם הושלמה.', 'pending']] },
-        { type: 'engines', h: 'ארבעת מנועי ההשבחה', items: [
+        { img: '14-dan-electric-fleet', type: 'engines', h: 'ארבעת מנועי ההשבחה', items: [
           ['פיתוח פעילות הליבה', ['הרחבת פעילות התחבורה והגדלת מפת הנסועה', 'הרחבת יבוא האוטובוסים באמצעות פנדן, מכ-100 ליותר מ-600 כלים בשנה', 'חידוש ההסכמים מול המדינה', 'הכפלת פעילות השאטלים בכביש 1', 'ייזום נתיבים מהירים ברשפון ובראשון לציון', 'זכייה במכרזי הרכבת הקלה: הקו הירוק בתל אביב והקו הכחול בירושלים', 'חישמול כ-1,200 אוטובוסים', 'התקנת כ-600 עמדות טעינה']],
           ['התייעלות תפעולית', ['שיפור וייעול הליכי הרכש', 'מעבר למטה רזה', 'הסדרי פרישה ל-425 עובדים', 'שיפור הסכמי השכר הקיבוציים', 'הפחתת שיעור אי-הביצוע מ-9% ל-1.5%', 'חיזוק השדרה הניהולית', 'הגדלת מצבת הנהגים והרחבת בית הספר לנהיגה']],
           ['חדשנות', ['הקמת קרן מוביליטק בשיתוף סמלת, להשקעה בחברות בתחומי התחבורה החכמה והחשמלית']],
@@ -212,7 +239,7 @@ window.LBH = {
         { type: 'split', h: 'אסטרטגיית הפיצול', intro: 'במסגרת אסטרטגיית ההשבחה הופרדו פעילות התחבורה, התשתיות והנדל"ן של קבוצת דן, מתוך תפיסה שלכל תחום מאפיינים עסקיים, אפשרויות צמיחה וצרכים פיננסיים שונים. כך ניתן לממש כל פעילות במסלול המתאים לה.', root: 'קבוצת דן',
           items: [['דן תחבורה', 'הפעלת תחבורה ציבורית, היסעים ורכבות קלות.', 'השליטה נמכרה ב-2026.', 'done'], ['דן נדל"ן', 'קרקעות, פרויקטים ונכסים מניבים.', 'נותרה בהחזקת Value LBH. מזכר הבנות לא מחייב למיזוג עם דוניץ אלעד.', 'pending'], ['דן תשתיות', 'פעילות תשתיות, ובהן תשתיות מים.', 'אינה כלולה במהלך המיזוג עם דוניץ אלעד, לפי הפרסומים.', 'other']] },
         { type: 'callout', h: 'מימוש ההשקעה: מאסטרטגיית השבחה ליצירת ערך', p: ['בפברואר 2026 נחתמה עסקה למכירת השליטה בדן תחבורה לקבוצת משקיעים בהובלת מנכ"ל דן, אופיר קרני, ובהשתתפות כלל ביטוח, לאומי פרטנרס ומזרחי טפחות אינווסט. לפי הפרסומים, העסקה שיקפה לדן תחבורה שווי חברה אפקטיבי של כ-2.8 מיליארד ש"ח, לעומת שווי של כ-1.26 מיליארד ש"ח לכל קבוצת דן בעת הכניסה להשקעה ב-2019.', 'מכירת החזקות Value LBH הושלמה בסוף יוני 2026, לאחר אישור רשות התחרות. באוקטובר 2026 הושלם גם השלב השני של העסקה, שבו רכשה קבוצת המשקיעים מניות נוספות מחברי דן והגיעה להחזקה של כ-57%.'] },
-        { type: 'text', h: 'דן נדל"ן: יצירת ערך באמצעות הפרדת פעילויות', p: ['פעילות הנדל"ן של קבוצת דן הופרדה מחברת התחבורה ונותרה בהחזקת Value LBH לאחר המימוש. דן נדל"ן מחזיקה קרקעות, פרויקטים ונכסים מניבים, ובהמשך למימוש פעילות התחבורה קודמו מהלכים להשבחתה ולבחינת שילובה בפלטפורמת נדל"ן רחבה יותר.', 'ב-26 באוגוסט 2026 דיווחה דוניץ אלעד על חתימת מזכר הבנות לא מחייב עם דן נדל"ן לעסקת מיזוג משולש הופכי. אם ייחתם הסכם מפורט ויתקיימו התנאים, תחזיק דוניץ אלעד במלוא מניות דן נדל"ן, כנגד הקצאת מניות לבעלי המניות של דן נדל"ן. נכון לסוף אוקטובר 2026, טרם נחתם הסכם מחייב והעסקה לא הושלמה.'] },
+        { img: '15-dan-real-estate-separation', type: 'text', h: 'דן נדל"ן: יצירת ערך באמצעות הפרדת פעילויות', p: ['פעילות הנדל"ן של קבוצת דן הופרדה מחברת התחבורה ונותרה בהחזקת Value LBH לאחר המימוש. דן נדל"ן מחזיקה קרקעות, פרויקטים ונכסים מניבים, ובהמשך למימוש פעילות התחבורה קודמו מהלכים להשבחתה ולבחינת שילובה בפלטפורמת נדל"ן רחבה יותר.', 'ב-26 באוגוסט 2026 דיווחה דוניץ אלעד על חתימת מזכר הבנות לא מחייב עם דן נדל"ן לעסקת מיזוג משולש הופכי. אם ייחתם הסכם מפורט ויתקיימו התנאים, תחזיק דוניץ אלעד במלוא מניות דן נדל"ן, כנגד הקצאת מניות לבעלי המניות של דן נדל"ן. נכון לסוף אוקטובר 2026, טרם נחתם הסכם מחייב והעסקה לא הושלמה.'] },
         { type: 'returns', h: 'תשואות הקרן', rows: ['dan-a', 'dan-b'], extra: [['7.9x', 'תשואה על ההשקעות בדן תחבורה, כפי שהיא מוצגת בנתוני הקבוצה. אינה מכפיל TVPI של אחת המחלקות.']] },
         { type: 'faq', h: 'שאלות ותשובות: דן', items: [
           ['מתי השקיעה LBH בדן?', 'ב-2019 התקשרו Value Base וקרן LBH תשתיות, בניהול שמעון בן חמו ועופר לינצ\'בסקי, ברכישת 40% ממניות דן לפי שווי של כ-1.26 מיליארד ש"ח. הרכישה הושלמה ב-2020, וב-2021 הוגדלה ההחזקה ל-50%. בנתוני הקבוצה שתי ההשקעות מופיעות כמחלקות Class A ו-Class B.'],
@@ -223,7 +250,7 @@ window.LBH = {
       ],
       en: [
         { type: 'stats', h: 'Key figures', items: [['~NIS 2.8', 'Billion', 'Effective company valuation of Dan Transportation in the 2026 sale of control (as reported)'], ['3.2x', '', 'EBITDA growth of Dan standalone, 2019–2025 (group data)'], ['7.9x', '', 'Return on the investments in Dan Transportation (group data)'], ['~1,200', '', 'Buses electrified during the investment period (group data)']] },
-        { type: 'text', h: 'The company and the investment', p: ['Dan is Israel\'s second-largest public transport company. In 2019 the investment house Value Base and the LBH Infrastructure fund, managed by Shimon Ben Hamo and Ofer Linchevski, agreed to acquire 40% of Dan from the members of the former cooperative, at a company valuation of about NIS 1.26 billion. The acquisition closed in early 2020, and a year later the holding was increased to 50% at the same valuation.', 'At the time of the investment, Dan relied mainly on operating bus routes, with a non-performance rate of about 9%. Fund representatives served on the board and, together with management, led a multi-year plan to strengthen the core business, improve efficiency and enter new infrastructure segments.'] },
+        { img: '13-dan-light-rail', type: 'text', h: 'The company and the investment', p: ['Dan is Israel\'s second-largest public transport company. In 2019 the investment house Value Base and the LBH Infrastructure fund, managed by Shimon Ben Hamo and Ofer Linchevski, agreed to acquire 40% of Dan from the members of the former cooperative, at a company valuation of about NIS 1.26 billion. The acquisition closed in early 2020, and a year later the holding was increased to 50% at the same valuation.', 'At the time of the investment, Dan relied mainly on operating bus routes, with a non-performance rate of about 9%. Fund representatives served on the board and, together with management, led a multi-year plan to strengthen the core business, improve efficiency and enter new infrastructure segments.'] },
         { type: 'timeline', h: 'Investment timeline', note: 'Class A and Class B are the fund\'s investment classes, per group data.', items: [
           ['2019', 'Agreement to acquire 40%', 'Value Base and the LBH Infrastructure fund agreed to acquire 40% of Dan at a valuation of about NIS 1.26 billion.', 'done'],
           ['2020', 'Acquisition closed (Class A)', 'The fund became Dan\'s controlling shareholder alongside the company\'s members.', 'done'],
@@ -234,7 +261,7 @@ window.LBH = {
           ['February 2026', 'Sale of control of Dan Transportation signed', 'At an effective company valuation of about NIS 2.8 billion.', 'done'],
           ['June 2026', 'Sale of Value LBH\'s holdings completed', 'The first stage closed after Competition Authority approval.', 'done'],
           ['August 2026', 'Dan Real Estate – Dunietz Elad MOU', 'A non-binding memorandum of understanding for a merger. The transaction has not been completed.', 'pending']] },
-        { type: 'engines', h: 'Four value creation engines', items: [
+        { img: '14-dan-electric-fleet', type: 'engines', h: 'Four value creation engines', items: [
           ['Core Business Development', ['Expanded transportation operations and the service map', 'Grew bus imports through Pandan from about 100 to more than 600 vehicles a year', 'Renewed agreements with the State', 'Doubled Route 1 shuttle operations', 'Initiated express lanes at Rishpon and Rishon LeZion', 'Won light rail tenders: the Tel Aviv Green Line and the Jerusalem Blue Line', 'Electrified some 1,200 buses', 'Installed about 600 charging points']],
           ['Operational Excellence', ['Improved and streamlined procurement', 'Moved to a lean headquarters', 'Retirement arrangements for 425 employees', 'Improved collective wage agreements', 'Cut the non-performance rate from 9% to 1.5%', 'Strengthened the management team', 'Expanded the driver workforce and the driving school']],
           ['Innovation', ['Established a mobility-tech fund with Samelet, investing in smart and electric transportation companies']],
@@ -243,7 +270,7 @@ window.LBH = {
         { type: 'split', h: 'Separation strategy', intro: 'As part of the value creation strategy, the Dan Group\'s transportation, infrastructure and real estate activities were separated, reflecting their different business characteristics, growth options and financing needs. Each business can then be realized along the path that suits it.', root: 'Dan Group',
           items: [['Dan Transportation', 'Public transport, private transport and light rail operations.', 'Control sold in 2026.', 'done'], ['Dan Real Estate', 'Land, development projects and income-producing assets.', 'Retained by Value LBH. Non-binding MOU for a merger with Dunietz Elad.', 'pending'], ['Dan Infrastructure', 'Infrastructure activity, including water infrastructure.', 'Not part of the Dunietz Elad merger, as reported.', 'other']] },
         { type: 'callout', h: 'Investment Exit: From Value Creation Strategy to Realized Value', p: ['In February 2026 an agreement was signed to sell control of Dan Transportation to an investor group led by Dan CEO Ofir Karni, with Clal Insurance, Leumi Partners and Mizrahi-Tefahot Invest. As reported, the transaction reflected an effective company valuation of about NIS 2.8 billion for Dan Transportation, compared with about NIS 1.26 billion for the whole Dan Group at the 2019 entry.', 'The sale of Value LBH\'s holdings closed at the end of June 2026, after Competition Authority approval. In October 2026 the second stage was also completed, with the investor group buying additional shares from Dan\'s members and reaching a holding of about 57%.'] },
-        { type: 'text', h: 'Dan Real Estate: Creating Value by Separating Businesses', p: ['The Dan Group\'s real estate business was separated from the transportation company and remained with Value LBH after the exit. Dan Real Estate holds land, development projects and income-producing assets, and following the transportation exit, steps were taken to enhance it and to explore combining it into a broader real estate platform.', 'On August 26, 2026, Dunietz Elad reported signing a non-binding memorandum of understanding with Dan Real Estate for a reverse triangular merger. If a definitive agreement is signed and conditions are met, Dunietz Elad will hold all of Dan Real Estate\'s shares in exchange for issuing shares to Dan Real Estate\'s shareholders. As of late October 2026, no binding agreement had been signed and the transaction had not been completed.'] },
+        { img: '15-dan-real-estate-separation', type: 'text', h: 'Dan Real Estate: Creating Value by Separating Businesses', p: ['The Dan Group\'s real estate business was separated from the transportation company and remained with Value LBH after the exit. Dan Real Estate holds land, development projects and income-producing assets, and following the transportation exit, steps were taken to enhance it and to explore combining it into a broader real estate platform.', 'On August 26, 2026, Dunietz Elad reported signing a non-binding memorandum of understanding with Dan Real Estate for a reverse triangular merger. If a definitive agreement is signed and conditions are met, Dunietz Elad will hold all of Dan Real Estate\'s shares in exchange for issuing shares to Dan Real Estate\'s shareholders. As of late October 2026, no binding agreement had been signed and the transaction had not been completed.'] },
         { type: 'returns', h: 'Fund returns', rows: ['dan-a', 'dan-b'], extra: [['7.9x', 'Return on the investments in Dan Transportation, as presented in the group\'s data. This is not the TVPI of either class.']] },
         { type: 'faq', h: 'Questions and answers: Dan', items: [
           ['When did LBH invest in Dan?', 'In 2019 Value Base and the LBH Infrastructure fund, managed by Shimon Ben Hamo and Ofer Linchevski, agreed to acquire 40% of Dan at a valuation of about NIS 1.26 billion. The acquisition closed in 2020 and the holding rose to 50% in 2021. In the group\'s data the two investments appear as Class A and Class B.'],
@@ -258,12 +285,12 @@ window.LBH = {
         { type: 'stats', h: 'נתוני מפתח', items: [['2.5x', '', 'צמיחה ב-EBITDA של קבוצת גדות, 2018–2025 (נתוני הקבוצה)'], ['116', 'מיליון דולר', 'EBITDA של קבוצת גדות בשנת 2025 (נתוני הקבוצה)'], ['30%', '', 'חלקה של גדות בנמל חיפה, לצד Adani Ports (70%)'], ['7', '', 'רכישות של גדות, 2021–2026 (נתוני הקבוצה)']] },
         { type: 'text', h: 'החברה וההשקעה', p: ['גדות היא קבוצה ישראלית הפועלת לאורך שרשרת הערך של כימיקלים, שמנים ודלקים: רכש, הובלה ימית, אחסון במסופים, הפצה ושיווק לתעשייה בישראל ובאירופה. עופר לינצ\'בסקי מכהן כמנכ"ל גדות מאז 2018.', 'בספטמבר 2021 רכשו קרנות LBH Value, המנוהלות בידי Value Base M&A, שמעון בן חמו ועופר לינצ\'בסקי, כ-38% ממניות גדות מידי קרן טנא, עם אופציות להגדלת ההחזקה, והפכו לשותפות בשליטה בחברה. בינואר 2023 החזיקו הקרנות בכ-48% מגדות, לפי הודעת משרד עורכי הדין שייצג אותן.'] },
         { type: 'chart', h: 'צמיחה ב-EBITDA', unit: 'מיליון דולר', bars: [['2018', 48, '48'], ['2025', 116, '116']], mult: '2.5x', multL: 'מכפיל צמיחה', note: 'EBITDA של קבוצת גדות, במיליוני דולר, לפי נתוני הקבוצה: 48 ב-2018, שנת מינויו של עופר לינצ\'בסקי למנכ"ל, ו-116 ב-2025. השקעת הקרנות החלה ב-2021, ולכן אין לייחס לה את מלוא הצמיחה בתקופה.' },
-        { type: 'deal', h: 'נמל חיפה: השקעה בתשתית אסטרטגית', intro: 'ביולי 2022 זכה הקונסורציום של גדות ו-Adani Ports במכרז הפרטת נמל חיפה, לרכישת מלוא החזקות המדינה בחברת נמל חיפה בתמורה של כ-4 מיליארד ש"ח. חלוקת ההחזקות בנמל: Adani Ports‏ 70%, גדות 30%.',
+        { img: '16-gadot-port-haifa', type: 'deal', h: 'נמל חיפה: השקעה בתשתית אסטרטגית', intro: 'ביולי 2022 זכה הקונסורציום של גדות ו-Adani Ports במכרז הפרטת נמל חיפה, לרכישת מלוא החזקות המדינה בחברת נמל חיפה בתמורה של כ-4 מיליארד ש"ח. חלוקת ההחזקות בנמל: Adani Ports‏ 70%, גדות 30%.',
           parties: [['Adani Ports', '70%'], ['גדות', '30%']], target: 'חברת נמל חיפה',
           facts: [['יולי 2022', 'זכייה במכרז ההפרטה'], ['כ-4 מיליארד ש"ח', 'תמורת הרכישה של 100% מהנמל'], ['ינואר 2023', 'הנפקת זכויות בגדות של כ-315 מיליון ש"ח, שבה השתתפו קרנות LBH Value, במסגרת מימון העסקה']],
           p: ['מימון וביצוע עסקאות מורכבות: רכישת נמל חיפה חיברה בין השקעת הון, שותפות אסטרטגית עם קבוצה בינלאומית וניהול עסקת תשתית בהיקף משמעותי. במסגרת המהלך גייסה גדות כ-315 מיליון ש"ח בהנפקת זכויות, שבה השתתפו קרנות LBH Value.', 'ההיגיון האסטרטגי: הנמל מחבר בין הפעילות הימית של גדות, המסופים ומערך האחסון וההובלה היבשתית. השילוב בין נכס תשתית פיזי לבין פעילות מסחרית ולוגיסטית מאפשר לגדות לשרת לקוחות לאורך כל שרשרת האספקה, מהאונייה ועד הלקוח.'] },
         { type: 'assets', h: 'נכסים ויכולות לוגיסטיות', items: [['16', 'אוניות מיכליות ייעודיות לכימיקלים'], ['8', 'מרכזים לוגיסטיים לחומרים מסוכנים'], ['260', 'מכליות כביש'], ['768,000', 'מ"ק נפח אחסון במיכלים'], ['12', 'כורים במתקן טולינג לשמנים'], ['6', 'טרמינלים לכימיקלים ומוצרי דלק בישראל ובאירופה'], ['5', 'חיבורים לים'], ['30%', 'החזקה בנמל חיפה']], note: 'נתוני הפעילות של קבוצת גדות כולה, לפי נתוני הקבוצה. אינם משקפים את חלקה של LBH.' },
-        { type: 'corridor', h: 'שרשרת אספקה גלובלית', intro: 'גדות בונה שרשרת אספקה עצמאית לכימיקלים, שמנים ודלקים, המשלבת פעילות ימית ויבשתית: אוניות מיכליות, מסופים ומיכלי אחסון, מכליות כביש ומרכזים לוגיסטיים. נמל חיפה משמש שער אסטרטגי, והתרחבות הפעילות לבלגיה ולארצות הברית מחברת בין התשתיות הפיזיות לבין לקוחות ושווקים בינלאומיים.',
+        { img: '18-gadot-global-expansion', type: 'corridor', h: 'שרשרת אספקה גלובלית', intro: 'גדות בונה שרשרת אספקה עצמאית לכימיקלים, שמנים ודלקים, המשלבת פעילות ימית ויבשתית: אוניות מיכליות, מסופים ומיכלי אחסון, מכליות כביש ומרכזים לוגיסטיים. נמל חיפה משמש שער אסטרטגי, והתרחבות הפעילות לבלגיה ולארצות הברית מחברת בין התשתיות הפיזיות לבין לקוחות ושווקים בינלאומיים.',
           nodes: [['ארה"ב', 'asset', 'סניף ביוסטון (2025)'], ['אירופה', 'asset', 'טרמינל בנמל גנט, בלגיה'], ['יוון', 'trade', ''], ['קפריסין', 'trade', ''], ['נמל חיפה', 'hub', 'שער אסטרטגי'], ['ירדן', 'trade', ''], ['ערב הסעודית', 'trade', ''], ['איחוד האמירויות', 'trade', ''], ['הודו', 'trade', '']],
           legend: [['asset', 'פעילות ונכסים של גדות'], ['hub', 'מרכז הפעילות בישראל'], ['trade', 'מדינות בשרשרת האספקה האזורית']],
           note: 'המדינות מוצגות כפי שהן מופיעות בחומרי הקבוצה. סימון מדינה אינו מעיד על נכס או על פעילות מסחרית של גדות במדינה זו.' },
@@ -283,12 +310,12 @@ window.LBH = {
         { type: 'stats', h: 'Key figures', items: [['2.5x', '', 'EBITDA growth of the Gadot Group, 2018–2025 (group data)'], ['$116', 'Million', 'Gadot Group EBITDA in 2025 (group data)'], ['30%', '', 'Gadot\'s share of Haifa Port, alongside Adani Ports (70%)'], ['7', '', 'Gadot acquisitions, 2021–2026 (group data)']] },
         { type: 'text', h: 'The company and the investment', p: ['Gadot is an Israeli group operating across the value chain of chemicals, oils and fuels: procurement, maritime shipping, terminal storage, distribution and marketing to industry in Israel and Europe. Ofer Linchevski has served as CEO of Gadot since 2018.', 'In September 2021 the LBH Value funds, managed by Value Base M&A, Shimon Ben Hamo and Ofer Linchevski, acquired about 38% of Gadot from the Tene fund, with options to increase their holding, becoming partners in control of the company. In January 2023 the funds held about 48% of Gadot, according to the law firm that represented them.'] },
         { type: 'chart', h: 'EBITDA growth', unit: 'USD million', bars: [['2018', 48, '48'], ['2025', 116, '116']], mult: '2.5x', multL: 'Growth multiple', note: 'Gadot Group EBITDA, in USD million, per group data: 48 in 2018, the year Ofer Linchevski became CEO, and 116 in 2025. The funds invested in 2021, so the full growth over the period should not be attributed to the investment.' },
-        { type: 'deal', h: 'Haifa Port: Investing in Strategic Infrastructure', intro: 'In July 2022 the Gadot and Adani Ports consortium won the Haifa Port privatization tender to acquire the State\'s entire holding in Haifa Port Company for about NIS 4 billion. The holding is split Adani Ports 70%, Gadot 30%.',
+        { img: '16-gadot-port-haifa', type: 'deal', h: 'Haifa Port: Investing in Strategic Infrastructure', intro: 'In July 2022 the Gadot and Adani Ports consortium won the Haifa Port privatization tender to acquire the State\'s entire holding in Haifa Port Company for about NIS 4 billion. The holding is split Adani Ports 70%, Gadot 30%.',
           parties: [['Adani Ports', '70%'], ['Gadot', '30%']], target: 'Haifa Port Company',
           facts: [['July 2022', 'Privatization tender won'], ['~NIS 4 billion', 'Consideration for 100% of the port'], ['January 2023', 'NIS 315 million rights offering at Gadot, with participation of the LBH Value funds, as part of the deal financing']],
           p: ['Financing and executing complex transactions: the Haifa Port acquisition combined equity investment, a strategic partnership with an international group and a large-scale infrastructure transaction. As part of the deal, Gadot raised about NIS 315 million in a rights offering in which the LBH Value funds took part.', 'The strategic logic: the port connects Gadot\'s maritime operations with its terminals, storage and land transport. Combining a physical infrastructure asset with commercial and logistics activity allows Gadot to serve customers across the entire supply chain, from the vessel to the customer.'] },
         { type: 'assets', h: 'Logistics assets and capabilities', items: [['16', 'Dedicated chemical tankers'], ['8', 'Hazardous materials logistics centers'], ['260', 'Road tankers'], ['768,000', 'Cubic meters of tank storage'], ['12', 'Reactors at an oil tolling facility'], ['6', 'Chemical and fuel terminals in Israel and Europe'], ['5', 'Sea connections'], ['30%', 'Holding in Haifa Port']], note: 'Operating figures for the Gadot Group as a whole, per group data. They do not reflect LBH\'s share.' },
-        { type: 'corridor', h: 'Global supply chain', intro: 'Gadot is building an independent supply chain for chemicals, oils and fuels that combines maritime and land operations: chemical tankers, terminals and tank storage, road tankers and logistics centers. Haifa Port serves as a strategic gateway, and expansion into Belgium and the United States links physical infrastructure with international customers and markets.',
+        { img: '18-gadot-global-expansion', type: 'corridor', h: 'Global supply chain', intro: 'Gadot is building an independent supply chain for chemicals, oils and fuels that combines maritime and land operations: chemical tankers, terminals and tank storage, road tankers and logistics centers. Haifa Port serves as a strategic gateway, and expansion into Belgium and the United States links physical infrastructure with international customers and markets.',
           nodes: [['United States', 'asset', 'Houston branch (2025)'], ['Europe', 'asset', 'Port of Ghent terminal, Belgium'], ['Greece', 'trade', ''], ['Cyprus', 'trade', ''], ['Haifa Port', 'hub', 'Strategic gateway'], ['Jordan', 'trade', ''], ['Saudi Arabia', 'trade', ''], ['UAE', 'trade', ''], ['India', 'trade', '']],
           legend: [['asset', 'Gadot operations and assets'], ['hub', 'Israeli operating hub'], ['trade', 'Countries in the regional supply chain']],
           note: 'Countries are shown as they appear in the group\'s materials. A marked country does not imply a Gadot asset or commercial activity in that country.' },
