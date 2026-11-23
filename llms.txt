@@ -1,18 +1,23 @@
 # LBH
 
-> LBH is an Israeli investment group founded by Shimon Ben Hamo and Ofer Linchevski. It manages three investment funds - Dan, Gadot and Mankai - combining senior executive experience, investment expertise and hands-on value creation (Buy & Build).
+> LBH (LBH Group) is an Israeli investment group founded by Shimon Ben Hamo and Ofer Linchevski. It invests in operating companies, mainly in infrastructure, transportation and logistics, and creates value through executive involvement (Buy & Build). Its investments in Dan and Gadot were made through the Value LBH funds (also "LBH Value"), established with the investment house Value Base.
 
-The authoritative information is the visible content of the pages below.
+Key facts (with dates; sources are linked on each page):
+- Dan: 2019 agreement by Value Base and the LBH Infrastructure fund to acquire 40% of Dan at ~NIS 1.26bn; holding increased to 50% in 2021. Control of Dan Transportation sold in 2026 (signed February, Value LBH's holdings sold by end of June) at an effective valuation of ~NIS 2.8bn, as reported. Dan Real Estate was separated and retained; a non-binding MOU for a merger with Dunietz Elad was signed in August 2026 and had not been completed as of late October 2026.
+- Gadot: LBH Value funds acquired ~38% in September 2021. Gadot and Adani Ports won the Haifa Port privatization in July 2022 (~NIS 4bn; Adani 70%, Gadot 30%). NIS 315m rights offering at Gadot in January 2023.
+- Hinoman (Mankai): acquired in 2022 in a court-supervised process for ~NIS 6m by an investor group led by the founders (74%) with Kibbutz Be'eri (26%).
+- Figures marked "group data" (EBITDA, IRR, TVPI, DPI, AUM NIS 5.8bn) come from LBH and are not audited public filings.
 
 ## Organization
-- [About LBH](https://benhorinalexandrovitz.github.io/lbh-site/en/about/)
+- [About LBH, facts and FAQ](https://benhorinalexandrovitz.github.io/lbh-site/en/about/)
 - [Our investments & track record](https://benhorinalexandrovitz.github.io/lbh-site/en/investments/)
 - [Investment strategy](https://benhorinalexandrovitz.github.io/lbh-site/en/strategy/)
+- [In the Media: dated sources](https://benhorinalexandrovitz.github.io/lbh-site/en/media/)
 
 ## Investments
-- [Dan Transportation](https://benhorinalexandrovitz.github.io/lbh-site/en/investments/dan/)
-- [Gadot](https://benhorinalexandrovitz.github.io/lbh-site/en/investments/gadot/)
-- [Mankai (Hinoman)](https://benhorinalexandrovitz.github.io/lbh-site/en/investments/mankai/)
+- [Dan Transportation and Dan Real Estate](https://benhorinalexandrovitz.github.io/lbh-site/en/investments/dan/)
+- [Gadot and Haifa Port](https://benhorinalexandrovitz.github.io/lbh-site/en/investments/gadot/)
+- [Mankai and Hinoman](https://benhorinalexandrovitz.github.io/lbh-site/en/investments/mankai/)
 
 ## Team
 - [Shimon Ben Hamo, Founding Partner](https://benhorinalexandrovitz.github.io/lbh-site/en/team/shimon-ben-hamo/)
@@ -21,6 +26,4 @@ The authoritative information is the visible content of the pages below.
 - [Yifat Feiglin, Head of Investments](https://benhorinalexandrovitz.github.io/lbh-site/en/team/yifat-feiglin/)
 
 ## Hebrew
-- [ראשי](https://benhorinalexandrovitz.github.io/lbh-site/he/)
-- [ההשקעות שלנו](https://benhorinalexandrovitz.github.io/lbh-site/he/investments/)
-- [הצוות](https://benhorinalexandrovitz.github.io/lbh-site/he/team/)
+- [ראשי](https://benhorinalexandrovitz.github.io/lbh-site/he/) · [אודות](https://benhorinalexandrovitz.github.io/lbh-site/he/about/) · [השקעות](https://benhorinalexandrovitz.github.io/lbh-site/he/investments/) · [בתקשורת](https://benhorinalexandrovitz.github.io/lbh-site/he/media/)

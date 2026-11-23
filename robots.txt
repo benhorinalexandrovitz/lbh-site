@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /lbh-site/src/
 
 Sitemap: https://benhorinalexandrovitz.github.io/lbh-site/sitemap.xml

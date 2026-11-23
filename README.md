@@ -1,13 +1,24 @@
 # lbh-site
 
-The LBH bilingual website (Hebrew default, English). Static site, no build step required to run.
-GitHub Pages: Settings → Pages → Deploy from branch `main`, folder `/`.
+The LBH bilingual website (Hebrew default, English), published with GitHub Pages from `main` (folder `/`).
 
-- `index.html` is the app: a hash-routed single page (`#/he/…`, `#/en/…`) rendered by `support.js` (React runtime in `vendor/`).
-- `content.js` holds all copy in Hebrew and English, including investment pages (`pages`), returns table (`returns`) and the disclosure text.
-  - Hide a fund or a person from the live site with `published: false`; hide a single block of an investment page with `show: false`.
-- `tools/prerender.js` writes a static copy of the page for every route (`he/about/index.html`, `en/investments/dan/index.html`, …) with route-specific title, description, canonical, hreflang and Open Graph tags, and regenerates `sitemap.xml` and `robots.txt`.
-  **Run `node tools/prerender.js` after editing `content.js` or `index.html`.**
-- Old URLs (`track-record`, `faq`, `insights`, removed team profiles) redirect to their new pages.
-- `404.html` sends unknown path URLs to the matching hash route.
-- Domain: `content.js` → `site.url` (currently the GitHub Pages address). Change it there and re-run the prerender script when a custom domain is connected.
+Every page is a real static URL (`/he/`, `/en/about/`, `/he/investments/dan/`, …) whose HTML already contains the full content,
+title, description, canonical, hreflang, Open Graph and JSON-LD. Visitors receive no JavaScript framework;
+`assets/site.js` only adds the mobile menu and the count-up animation.
+
+## Editing
+- **Text and data:** `content.js` (Hebrew and English side by side). Investment pages are built from `pages.<fund>` blocks;
+  dated public sources are in `sources` and feed both the Sources blocks and the In the Media page.
+  Hide a fund or person with `published: false`, a block with `show: false`.
+- **Layout:** `src/app.html` (source template). Open `src/app.html#/he/` through a local web server to preview.
+- **Build:** after any change run
+  ```
+  pip install playwright && python -m playwright install chromium   # once
+  python tools/build.py
+  ```
+  This regenerates `index.html`, `he/`, `en/`, `404.html`, redirect pages for old URLs, `sitemap.xml` and `robots.txt`.
+- **Domain:** set `site.url` in `content.js` and rebuild; every link, canonical and sitemap entry follows it.
+  Note: on a `*.github.io/<repo>` address, `robots.txt` is not read by crawlers (it must sit at the domain root);
+  submit `sitemap.xml` in Google Search Console instead. With a custom domain it works automatically.
+
+Old hash links (`#/he/...`) and removed pages (`contact`, `faq`, `track-record`, removed profiles) redirect to their new URLs.
