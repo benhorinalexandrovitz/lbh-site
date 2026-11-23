@@ -1,24 +1,26 @@
 # LBH
 
-> LBH is an Israeli investment group in infrastructure, industry, logistics and real estate, led by Ofer Linchevski and Shimon Ben Hamo, currently focused on the aerospace and defense supply chain.
+> LBH is an Israeli investment group founded by Shimon Ben Hamo and Ofer Linchevski. It manages three investment funds - Dan, Gadot and Mankai - combining senior executive experience, investment expertise and hands-on value creation (Buy & Build).
 
-Experimental supplementary file. The authoritative information is the visible content of the pages below.
+The authoritative information is the visible content of the pages below.
 
 ## Organization
-- [About LBH](https://lbh.example/en/about/)
-- [Investment strategy](https://lbh.example/en/strategy/)
-- [Track record](https://lbh.example/en/track-record/)
-- [Questions and answers](https://lbh.example/en/faq/)
+- [About LBH](https://benhorinalexandrovitz.github.io/lbh-site/en/about/)
+- [Our investments & track record](https://benhorinalexandrovitz.github.io/lbh-site/en/investments/)
+- [Investment strategy](https://benhorinalexandrovitz.github.io/lbh-site/en/strategy/)
+
+## Investments
+- [Dan Transportation](https://benhorinalexandrovitz.github.io/lbh-site/en/investments/dan/)
+- [Gadot](https://benhorinalexandrovitz.github.io/lbh-site/en/investments/gadot/)
+- [Mankai (Hinoman)](https://benhorinalexandrovitz.github.io/lbh-site/en/investments/mankai/)
 
 ## Team
-- [Shimon Ben Hamo, Founding Partner](https://lbh.example/en/team/shimon-ben-hamo/)
-- [Ofer Linchevski, Founding Partner](https://lbh.example/en/team/ofer-linchevski/)
-- [Mordy Ben Ami, Managing Partner](https://lbh.example/en/team/mordy-ben-ami/)
-- [Moni Katz, Managing Partner](https://lbh.example/en/team/moni-katz/)
-- [Dori Grossman, Managing Director](https://lbh.example/en/team/dori-grossman/)
-- [Yifat Feiglin, Head of Investments](https://lbh.example/en/team/yifat-feiglin/)
-- [Assaf Reich, Senior Operating Advisor](https://lbh.example/en/team/assaf-reich/)
+- [Shimon Ben Hamo, Founding Partner](https://benhorinalexandrovitz.github.io/lbh-site/en/team/shimon-ben-hamo/)
+- [Ofer Linchevski, Founding Partner](https://benhorinalexandrovitz.github.io/lbh-site/en/team/ofer-linchevski/)
+- [Dori Grossman, Principal](https://benhorinalexandrovitz.github.io/lbh-site/en/team/dori-grossman/)
+- [Yifat Feiglin, Head of Investments](https://benhorinalexandrovitz.github.io/lbh-site/en/team/yifat-feiglin/)
 
 ## Hebrew
-- [דף הבית](https://lbh.example/he/)
-- [הצוות](https://lbh.example/he/team/)
+- [ראשי](https://benhorinalexandrovitz.github.io/lbh-site/he/)
+- [ההשקעות שלנו](https://benhorinalexandrovitz.github.io/lbh-site/he/investments/)
+- [הצוות](https://benhorinalexandrovitz.github.io/lbh-site/he/team/)

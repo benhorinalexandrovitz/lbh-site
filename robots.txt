@@ -1,8 +1,4 @@
-# LBH. Domain is a placeholder until the production domain is confirmed.
 User-agent: *
 Allow: /
-Disallow: /he/checklist/
-Disallow: /en/checklist/
-Disallow: /api/
 
-Sitemap: https://lbh.example/sitemap.xml
+Sitemap: https://benhorinalexandrovitz.github.io/lbh-site/sitemap.xml
